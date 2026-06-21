@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parfymearkiv</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #0d0e12; --panel: #11121a; --line: #1a1b25; --line-soft: #13141c;
+  --text: #d4cfc8; --muted: #5a5a6e; --dim: #3a3a50;
+  --gold: #c9a84c; --green: #8fba6e; --blue: #6baed6; --gray: #7a7a8a; --red: #c0564e;
+}
+body { font-family: Georgia, serif; background: var(--bg); color: var(--text); min-height: 100vh; max-width: 640px; margin: 0 auto; }
+.mono { font-family: ui-monospace, Menlo, Consolas, monospace; }
+.header { padding: 16px 14px 10px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; background: var(--bg); z-index: 10; }
+.header .sub { font-family: ui-monospace, monospace; font-size: 9px; letter-spacing: 0.2em; color: var(--dim); }
+.header .title { font-size: 18px; margin-top: 1px; }
+.btn { font-family: ui-monospace, monospace; cursor: pointer; background: none; }
+.btn-new { border: 1px solid var(--gold); color: var(--gold); padding: 7px 14px; font-size: 12px; }
+.controls { padding: 10px 14px 8px; border-bottom: 1px solid var(--line-soft); position: sticky; top: 57px; background: var(--bg); z-index: 9; }
+.search { width: 100%; background: #13141c; border: 1px solid var(--line); color: var(--text); padding: 8px 11px; font-size: 14px; font-family: Georgia, serif; outline: none; margin-bottom: 8px; }
+.filters { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px; }
+.filter { border: 1px solid var(--line); color: var(--muted); padding: 5px 12px; font-size: 11px; white-space: nowrap; background: none; }
+.filter.active { background: #1e1f2a; border-color: #3a3b50; color: var(--text); }
+.stats { padding: 6px 14px; border-bottom: 1px solid var(--line-soft); display: flex; gap: 14px; font-size: 12px; color: var(--muted); }
+.stats b { color: #9a9790; margin-right: 3px; font-weight: normal; }
+.row { display: flex; align-items: center; gap: 11px; padding: 12px 14px; cursor: pointer; border-bottom: 1px solid var(--line-soft); }
+.row.open { background: var(--panel); }
+.row .score { min-width: 30px; text-align: right; font-size: 15px; font-weight: bold; }
+.row .name { font-size: 13px; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.row .prof { font-size: 11px; color: var(--dim); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-top: 2px; }
+.row .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.detail { padding: 8px 14px 14px 55px; background: var(--panel); border-bottom: 1px solid var(--line-soft); }
+.detail .notes { font-size: 12px; color: #7a7870; line-height: 1.75; border-left: 2px solid #222230; padding-left: 10px; margin-bottom: 10px; }
+.detail .empty { font-size: 11px; color: #252535; font-family: ui-monospace, monospace; margin-bottom: 10px; letter-spacing: 0.08em; }
+.detail-actions { display: flex; gap: 8px; }
+.btn-edit { border: 1px solid #252535; color: var(--muted); padding: 5px 14px; font-size: 11px; }
+.btn-del { border: 1px solid #2a1515; color: #7a3535; padding: 5px 10px; font-size: 11px; }
+.form { padding: 14px; background: var(--panel); border: 1px solid #2a2b38; margin: 12px 14px; }
+.form.inline { margin: 0; border: none; border-top: 1px solid var(--line); background: #0f1018; }
+.form label { font-family: ui-monospace, monospace; font-size: 9px; color: var(--dim); letter-spacing: 0.15em; display: block; margin-bottom: 3px; }
+.form input, .form textarea, .form select { width: 100%; background: var(--bg); border: 1px solid var(--line); color: var(--text); padding: 7px 10px; font-size: 13px; font-family: Georgia, serif; outline: none; margin-bottom: 9px; }
+.form-row { display: flex; gap: 8px; }
+.form-row > div { flex: 1; }
+.checkrow { display: flex; align-items: center; gap: 7px; margin-bottom: 11px; }
+.checkrow input { width: auto; margin: 0; accent-color: var(--gold); }
+.checkrow label { margin: 0; cursor: pointer; color: #7a7870; }
+.form-actions { display: flex; gap: 8px; }
+.btn-save { flex: 1; background: #0f1a0f; border: 1px solid var(--green); color: var(--green); padding: 8px; font-size: 11px; }
+.btn-cancel { border: 1px solid var(--line); color: var(--dim); padding: 8px 13px; font-size: 11px; }
+.empty-list { padding: 40px 14px; text-align: center; color: #252535; font-family: ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; }
+.sync-bar { padding: 9px 14px; border-bottom: 1px solid var(--line-soft); display: flex; align-items: center; gap: 8px; font-size: 11px; font-family: ui-monospace, monospace; }
+.sync-status { color: var(--muted); flex: 1; }
+.sync-status.ok { color: var(--green); }
+.sync-status.err { color: var(--red); }
+.sync-status.dirty { color: var(--gold); }
+.btn-sync { border: 1px solid #3a3b50; color: var(--text); padding: 5px 12px; font-size: 11px; }
+.btn-key { border: 1px solid #2a2b38; color: var(--muted); padding: 5px 10px; font-size: 11px; }
+.modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; z-index: 100; padding: 20px; }
+.modal { background: var(--panel); border: 1px solid #2a2b38; padding: 18px; max-width: 460px; width: 100%; }
+.modal h3 { font-size: 14px; font-weight: normal; margin-bottom: 6px; }
+.modal p { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 12px; }
+.modal input { width: 100%; background: var(--bg); border: 1px solid var(--line); color: var(--text); padding: 8px 10px; font-size: 13px; font-family: ui-monospace, monospace; outline: none; margin-bottom: 10px; }
+.modal .modal-actions { display: flex; gap: 8px; }
+.loader { display: flex; align-items: center; justify-content: center; min-height: 100vh; color: var(--dim); font-family: ui-monospace, monospace; font-size: 11px; letter-spacing: 0.2em; }
+</style>
+</head>
+<body>
+<div id="app"><div class="loader">LASTER...</div></div>
+
+<script>
+// ============ CONFIG ============
+const GH_OWNER = "attila77nor";
+const GH_REPO = "fragrance-tracker";
+const GH_PATH = "data.json";
+const GH_BRANCH = "main";
+const TOKEN_KEY = "ft_gh_token";
+const SEED_DATA = [{"id": 1, "score": 10.0, "name": "YSL L'Homme Le Parfum", "status": "tested", "owned": true, "profile": "dry amberwood; warm; elegant", "notes": "Perfect dry amberwood balance; elegant, warm, refined; signature-level from opening to base."}, {"id": 2, "score": 9.0, "name": "Acqua di Giò Elixir", "status": "tested", "owned": true, "profile": "woody-amber; refined; warm fresh", "notes": "Smooth, elegant, fresh-woody; natural and warm without synthetic edge; loved throughout all phases; clear Tier 1."}, {"id": 3, "score": 9.0, "name": "Matière Première Bois d'Ébène", "status": "estimated", "owned": false, "profile": "cedar; vetiver; dry wood", "notes": ""}, {"id": 4, "score": 9.0, "name": "Creed Aventus", "status": "tested", "owned": false, "profile": "smoky; textured ambergris; natural", "notes": "Dry, textured woody-amber; fruity top fades to addictive smoky base; top-tier and intoxicating."}, {"id": 5, "score": 9.0, "name": "Prada Luna Rossa Black", "status": "tested", "owned": false, "profile": "varm, tørr, mørk amber uten sødme", "notes": "Helt super. Minner mye om the ONE EDP, men litt mindre varm, litt mer uplifting og uformell. Super"}, {"id": 6, "score": 8.5, "name": "Dolce Gabbana The One Parfum", "status": "tested", "owned": false, "profile": "NB: nyhet. Ikke edp, men Parfum.", "notes": "Åpning: Tørr, klar struktur; umiddelbart gjenkjennelig The One-DNA. Hjerte: Strammer seg, mørkere og renere enn EDP. Drydown: Svært tørr, mørk og strukturert; mer ryggrad enn EDP. Oppsummert: lik EDP, men litt mørkere og litt mer strukturert. De kan gå over i hverandre, trenger ikke eie begge to i parallell. gjerne forsøke denne neste gang"}, {"id": 7, "score": 8.5, "name": "YSL Y Intense", "status": "tested", "owned": false, "profile": "Skal matche mitt DNA bedre enn edp. Tørrere Mindre søt Mer ambroxan-drevet. Dette er også en risiko, om denne blir metallisk", "notes": "Overraskende god match: struktur øker i midtfasen og ender i tørr, varm base uten ambroxan-kollaps. Bedre enn YSL Y EDP"}, {"id": 8, "score": 8.0, "name": "D&G The One EDP", "status": "tested", "owned": true, "profile": "warm amber; tobacco; smooth", "notes": "Warm, elegant spice; slightly sweet but refined; weaker performance; still top-tier signature feel."}, {"id": 9, "score": 8.0, "name": "YSL Y EDP", "status": "tested", "owned": true, "profile": "fresh-warm amberwood; clean", "notes": "Fresh opening, structured warm amberwood heart; drydown retains core DNA but softer; liker all phases, men litt juvenile/enkel"}, {"id": 10, "score": 8.0, "name": "Xerjoff Uden", "status": "estimated", "owned": false, "profile": "Tørr sitrus. Elegant rom-aktig varme", "notes": ""}, {"id": 11, "score": 8.0, "name": "Cartier - Déclaration Parfum", "status": "estimated", "owned": false, "profile": "Kardemomme, Tørr krydder, Sedertre, Lett læraktig varme, Lav sødme, Ingen pudder", "notes": ""}, {"id": 12, "score": 8.0, "name": "En fra Svensk Parfym", "status": "estimated", "owned": false, "profile": "rolig, nordisk, tørr, nesten asketisk", "notes": ""}, {"id": 13, "score": 8.0, "name": "Terre d'Hermès Eau Givrée", "status": "tested", "owned": false, "profile": "mineral; dry; refined freshness", "notes": "Mineral dry freshness; elegant and balanced; consistently very good but not highest tier."}, {"id": 14, "score": 8.0, "name": "Bleu de chanel Parfum", "status": "estimated", "owned": false, "profile": "Tørrere og mer rett i strukturen. Mindre fluffy musk enn EDP", "notes": ""}, {"id": 15, "score": 8.0, "name": "Acqua di Parma – Colonia Oud", "status": "estimated", "owned": false, "profile": "tørr oud-tre, ren, ikke søt (ikke arabisk)", "notes": ""}, {"id": 16, "score": 8.0, "name": "Acqua di Giò Profumo", "status": "tested", "owned": false, "profile": "som elixir, men i den kjølige aksen", "notes": "som elixir i midten. åpningen er litt mer spiss, og dry down mykere. god."}, {"id": 17, "score": 8.0, "name": "Dior Homme 2020", "status": "estimated", "owned": false, "profile": "dry cedar; clean vetiver; modern elegant", "notes": ""}, {"id": 18, "score": 8.0, "name": "He Wood Rocky Mountain Wood – DSquared", "status": "estimated", "owned": false, "profile": "dry cedar; mineral; airy smoke", "notes": ""}, {"id": 19, "score": 8.0, "name": "Zara Black Pepper & Cedarwood", "status": "estimated", "owned": false, "profile": "tolkning av Creed Royal Oud – tørr, krydret trenote; sort pepper, mild rose og massivt sedertre", "notes": ""}, {"id": 20, "score": 8.0, "name": "Explorer Ultra Black", "status": "estimated", "owned": false, "profile": "mørkere pepper/woody, fortsatt tørr", "notes": ""}, {"id": 21, "score": 8.0, "name": "Narciso Rodriguez Bleu Noir EDP", "status": "estimated", "owned": false, "profile": "clean musk; cedar; pepper", "notes": ""}, {"id": 22, "score": 7.5, "name": "Tom Ford Oud Mineral", "status": "tested", "owned": false, "profile": "mineral-salt; dry; tekstural", "notes": "Tørr, mineral-salt og strukturert gjennom hele utviklingen; holder kontur uten kollaps, oppleves interessant og annerledes enn din kjerne (mer tekstural enn polert). kan kjøpes. nana likte veldig godt på meg"}, {"id": 23, "score": 7.5, "name": "Roja Elysium Noir", "status": "tested", "owned": false, "profile": "sitrus/urter åpning; vetiver/sedertre hjerte; lær, ambergris, musk base", "notes": "Åpningen opplevdes litt for polert og kjølig, men i midtfasen ble den svært god – tørr woody struktur med kroppsnær, usøt varme"}, {"id": 24, "score": 7.5, "name": "Gucci Guilty Absolute Pour Homme", "status": "estimated", "owned": false, "profile": "tørr, røkt tre/patchouli + hint av lær, nesten ingen sitrus i åpning", "notes": ""}, {"id": 25, "score": 7.0, "name": "Bottega Veneta Pour Homme Extreme", "status": "estimated", "owned": false, "profile": "The One EDP, men mer moden, tørrere og mer elegant", "notes": ""}, {"id": 26, "score": 7.0, "name": "Mancera Cedrat Boisé", "status": "estimated", "owned": false, "profile": "Strukturert sitrus i topp. Tørrere og mørkere base enn original", "notes": "Testet. Helt ok. men sprayet lite, den var nesten tom. Kunne godt testet en gang til"}, {"id": 27, "score": 7.0, "name": "Ormonde Jayne Montabaco Intensivo", "status": "estimated", "owned": false, "profile": "Tørr tobakk, læraktig varme, litt aromatisk friskhet i topp, myk hudnær base", "notes": ""}, {"id": 28, "score": 7.0, "name": "Terre d'Hermès Parfum", "status": "estimated", "owned": false, "profile": "Tettere og mer konsentrert, fortsatt tørr. Varmere mineral/tre. Kan bli litt tung på huden.", "notes": ""}, {"id": 29, "score": 7.0, "name": "Nishane Hacivat", "status": "tested", "owned": false, "profile": "Tørr, strukturert frukt + eikemose", "notes": "Tørr og stabil struktur hele veien; god arkitektur men litt klassisk chypre-signatur som gir svakt old-school-preg. Lavere score enn estimert"}, {"id": 30, "score": 7.0, "name": "Mancera Aoud Lemon Mint", "status": "estimated", "owned": false, "profile": "tørr sitrus, mint, ren arkitektur", "notes": ""}, {"id": 31, "score": 7.0, "name": "Montblanc Explorer", "status": "tested", "owned": false, "profile": "vetiver; ambroxan; leather", "notes": "Kopi av Aventus Creed. Veldig god, men oppleves litt billig / enkel"}, {"id": 32, "score": 7.0, "name": "Amouage Opus XVI – Timber", "status": "tested", "owned": false, "profile": "krydret/røkelse topp (saffran, kardemomme); woody hjerte (patchouli, treverk); resinøs base (benzoin, amber)", "notes": "Åpningen var for røyk/lær-tung og skapte skepsis, men i midtfasen blendet den seg og utviklet en strukturert, lett kremet kroppsnær varme uten kollaps; opplevdes svært god i drydown"}, {"id": 33, "score": 7.0, "name": "YSL Y Elixir", "status": "tested", "owned": false, "profile": "karakterfull og tørr designer-amberwood/ambroxan", "notes": "Åpning: Tørr og stram; presis, med lett blå/mineral friskhet. Hjerte: Ren og korrekt; friskheten trekker seg tilbake. Drydown: For glatt/polert; mister særpreg og kroppsnærhet. EDP-en er adskillig bedre. (Dette skal være den beste av flankerne)"}, {"id": 34, "score": 7.0, "name": "Loewe 7 Anonimo", "status": "tested", "owned": false, "profile": "tørr, mørk, strukturert, woody, varm", "notes": "ok. ren, frisk, men demper seg til behagelig wood. ikke en kjøpskandidat. ganske svak."}, {"id": 35, "score": 8.0, "name": "Burberry Hero Parfum", "status": "estimated", "owned": false, "profile": "best i linjen, tørrere og mer samlet; mørkere tre, mindre friskhet, mer kontroll", "notes": ""}, {"id": 36, "score": 7.0, "name": "Burberry Hero EDT", "status": "tested", "owned": true, "profile": "spicy-woody; fresh", "notes": "Natural spicy-woody freshness; great opening and heart; base becomes soft/babypowder-ish; overall very good."}, {"id": 37, "score": 7.0, "name": "Amouage Overture Man EDP", "status": "estimated", "owned": false, "profile": "mer woody/amber og mindre gourmandy enn enkelte andre Amouage-dufter", "notes": ""}, {"id": 38, "score": 7.0, "name": "Guerlain Vetiver EDT", "status": "estimated", "owned": false, "profile": "tørr, jordlig vetiver + cedar uten grønn aromatikk", "notes": ""}, {"id": 39, "score": 7.0, "name": "Guerlain Homme EDP", "status": "estimated", "owned": false, "profile": "Mojito-inspirert (lime/mint), cedertre og vetiver; mint-noten kan være grønn-aromatisk", "notes": ""}, {"id": 40, "score": 7.0, "name": "Bleu de Chanel EDP", "status": "tested", "owned": false, "profile": "clean sandalwood; smooth woody", "notes": "Elegant, balanced, smooth; refined but slightly too soft/feminine in late drydown; pleasant, not top tier."}, {"id": 41, "score": 7.0, "name": "Gisada Titanium EDP", "status": "estimated", "owned": false, "profile": "tørrere, maskulin struktur med pepper/woody noter", "notes": ""}, {"id": 42, "score": 7.0, "name": "Prada Amber Pour Homme", "status": "estimated", "owned": false, "profile": "tørr amber, ren, ikke søt", "notes": ""}, {"id": 43, "score": 7.0, "name": "Gentlemen Only – Givenchy", "status": "estimated", "owned": false, "profile": "spicy cedar; dry vetiver; refined musk", "notes": ""}, {"id": 44, "score": 7.0, "name": "Sander for Men – Jil Sander", "status": "estimated", "owned": false, "profile": "dry woods; pepper spice; elegant incense", "notes": ""}, {"id": 45, "score": 7.0, "name": "Zara Extreme 6.0", "status": "estimated", "owned": false, "profile": "tolkning av YSL L'Homme Le Parfum Intense", "notes": ""}, {"id": 46, "score": 7.0, "name": "Terre d'Hermès EDT", "status": "estimated", "owned": false, "profile": "vetiver; cedar; mineral; pepper", "notes": ""}, {"id": 47, "score": 7.0, "name": "YSL Y Parfum", "status": "estimated", "owned": false, "profile": "warm amber; sweet edge", "notes": ""}, {"id": 48, "score": 7.0, "name": "Molecule 01 + Patchouli", "status": "estimated", "owned": false, "profile": "", "notes": ""}, {"id": 49, "score": 7.0, "name": "Ormonde Man", "status": "estimated", "owned": false, "profile": "juniper; vetiver; cedar; spices", "notes": ""}, {"id": 50, "score": 7.0, "name": "Montblanc Black Meisterstück", "status": "estimated", "owned": false, "profile": "røkelse/vetiver – tørr dybde uten sødme", "notes": ""}, {"id": 51, "score": 7.0, "name": "Montblanc Vetiver Glacier", "status": "estimated", "owned": false, "profile": "potensielt TdH-ish struktur, men white musk kan gjøre den for myk", "notes": ""}, {"id": 52, "score": 7.0, "name": "Chanel Sycomore", "status": "estimated", "owned": false, "profile": "smoky vetiver; dry cedar", "notes": ""}, {"id": 53, "score": 6.5, "name": "Chanel Égoïste EDT", "status": "tested", "owned": false, "profile": "tørr åpning; varm kanel/krydder", "notes": "Tørr og tydelig struktur, men utvikler seg til varm kanel/krydder-fylde som føles litt klassisk og faller noe i attraktivitet."}, {"id": 54, "score": 6.5, "name": "Acqua di Parma – Colonia Intensa", "status": "tested", "owned": false, "profile": "tørr, elegant, struktur, lite sødme", "notes": "Som luksussåpe, med et old school/klassisk tilsnitt. Mye lavere enn estimert"}, {"id": 55, "score": 6.5, "name": "PDM Percival", "status": "tested", "owned": false, "profile": "clean woody-aromatic; ambroxan; elegant", "notes": "blant de bedre sommerduftene, som betyr ren, frisk, strukturert men uten mye dybde. noe grøntish som jeg ikke helt klarer å like kjempegodt i dry down. på grensen til 6"}, {"id": 56, "score": 6.0, "name": "Roja Vetiver Pour Homme EDP", "status": "estimated", "owned": false, "profile": "moderne, tørr, ren struktur med voksen eleganse", "notes": ""}, {"id": 57, "score": 6.0, "name": "Nishane Ani", "status": "estimated", "owned": false, "profile": "høy risiko. strukturert vanilje", "notes": ""}, {"id": 58, "score": 6.0, "name": "MFK Masculin Pluriel", "status": "estimated", "owned": false, "profile": "tørt treverk + lavintensitet varme. Mykhet som luft, ikke kosmetikk. Ekstremt kontrollert volum", "notes": ""}, {"id": 59, "score": 6.0, "name": "Issey Miyake Eau & Cèdre", "status": "tested", "owned": false, "profile": "tørr ceder; glir mot såpe/clean woody", "notes": "Starter riktig (tørr, tydelig ceder), men glir mot såpe/clean woody og blir for lett og litt feminin i uttrykket. Gjør lite galt, men mangler tyngde og definert struktur til å bli mer enn pent."}, {"id": 60, "score": 6.0, "name": "Creed Royal Oud", "status": "tested", "owned": false, "profile": "dry cedar; spice; ambergris", "notes": "det blir for voksent og en lukt som er god, men som jeg ikke synes er en parfyme-duft. litt feil akse"}, {"id": 61, "score": 6.0, "name": "Givenchy Gentleman Society Ambrée", "status": "tested", "owned": false, "profile": "amber; tobacco; vanilla", "notes": "Helt ok. Lavere enn estimat (8) - litt fougere-tendenser. Men er blant de beste i denne kategorien, for det er ok struktur og tørrhet gjennom hele."}, {"id": 62, "score": 6.0, "name": "Burberry Hero Parfum (testet)", "status": "tested", "owned": false, "profile": "best i serien; mest struktur/tilstedeværelse, men for varm/amber-orientert i basen", "notes": "dry down endte ganske kremet, men med noe mer struktur enn feks armani code og lignende, så 6."}, {"id": 63, "score": 6.0, "name": "The One Intense", "status": "tested", "owned": false, "profile": "floral/uplifting; unisex", "notes": "mindre struktur, mer floral/uplifting, mer unisex, mindre maskulin enn The One EDP. kan være fantastisk til nana?"}, {"id": 64, "score": 6.0, "name": "Tom Ford Grey Vetiver", "status": "tested", "owned": false, "profile": "dry vetiver; moss; citrus", "notes": "Har ikke notes, men den var ok, ikke noe spesielt. Ok fra base og ut."}, {"id": 65, "score": 7.0, "name": "Dior Homme Intense 2020", "status": "tested", "owned": false, "profile": "tørr amber/cedar; kardemomme; mørk krydder", "notes": "Elegant åpning med kardemomme og mørk krydder; strukturen holder overraskende godt inn i midtfasen, men drydown kollapser mot pudret iris og mister kontur. Blant de beste i sjangeren, men ikke en kjøpskandidat."}, {"id": 66, "score": 6.0, "name": "Givenchy Gentleman Réserve Privée", "status": "estimated", "owned": false, "profile": "tørr kakao/whisky-amber. mørk, elegant, moden", "notes": ""}, {"id": 67, "score": 6.0, "name": "Chanel Allure Homme Édition Blanche EDP", "status": "estimated", "owned": false, "profile": "annen retning innen varm signaturzone", "notes": ""}, {"id": 68, "score": 6.0, "name": "Visit for Men – Azzaro", "status": "estimated", "owned": false, "profile": "dry incense; textured cedar; urban amberwood", "notes": ""}, {"id": 69, "score": 6.0, "name": "YSL Vétiver", "status": "estimated", "owned": false, "profile": "tørr, kjølig, frisk-tre struktur; clean, crisp, dry", "notes": ""}, {"id": 70, "score": 6.0, "name": "Zara Vibrant Leather", "status": "estimated", "owned": false, "profile": "tolkning av Aventus Creed", "notes": ""}, {"id": 71, "score": 6.0, "name": "Bentley for Men Absolute", "status": "estimated", "owned": false, "profile": "dry cedar; incense", "notes": ""}, {"id": 72, "score": 5.0, "name": "Initio Parfums Privés", "status": "estimated", "owned": false, "profile": "risiko. Strukturert tre + frukt. kan bli for klissete", "notes": ""}, {"id": 73, "score": 5.0, "name": "Gisada Luxury Collection Oud Parfum", "status": "estimated", "owned": false, "profile": "stor usikkerhet. ren tre + røkelse kan være relevant", "notes": ""}, {"id": 74, "score": 5.0, "name": "Amouage Opus XIV Royal Tobacco", "status": "tested", "owned": false, "profile": "strukturert ryggrad; woody/amber; høy risiko orientalsk", "notes": "forventet høy, men Sødmen føles klissete og resinøs. Amber dominerer over tobakk. Opplevelsen blir irriterende over tid."}, {"id": 75, "score": 5.0, "name": "Amouage Boundless", "status": "tested", "owned": false, "profile": "stabil uten utvikling", "notes": "Holdt seg relativt stabil uten tydelig utvikling; verken for søt eller kremet, men manglet bærende struktur og ble mindre interessant over tid (fallende score)"}, {"id": 76, "score": 5.0, "name": "Givenchy Gentleman Society", "status": "tested", "owned": false, "profile": "moderne woody-amber; iris-risiko", "notes": "Startet relativt tørr og strukturert, men utviklet seg mot pudret/glatt iris og mistet attraktivitet; opplevdes som for kosmetisk i drydown og falt tydelig i score."}, {"id": 77, "score": 5.0, "name": "Terre d'Hermès EDP Intense", "status": "tested", "owned": false, "profile": "pepper + tre + lava stone/mineral", "notes": "mye lavere enn antatt. Varmen går mot krydder/søtlig tre, ikke tørr/mineral varme."}, {"id": 78, "score": 5.0, "name": "Parfums de Marly Carlisle", "status": "tested", "owned": false, "profile": "varm, elegant Aventus-variant", "notes": "ok, men for mørk krydder, patchouli, tung og nesten orientalsk ryggrad"}, {"id": 79, "score": 5.0, "name": "Dior Sauvage EDT", "status": "tested", "owned": false, "profile": "pepper; bright ambroxan", "notes": "kunstig ambroxan i åpning, ikke bra. Tones ned, men overtas av en litt kremete/pudrete følelse. ikke superfan, men forsåvidt elegant nok."}, {"id": 80, "score": 5.0, "name": "Bleu de Chanel Parfum (L'Exclusif)", "status": "estimated", "owned": false, "profile": "deep smooth woods", "notes": ""}, {"id": 81, "score": 5.0, "name": "Prada Luna Rossa Carbon", "status": "tested", "owned": false, "profile": "synthetic amberwood", "notes": "Flat synthetic amberwood; pleasant but generic; weakest among tested."}, {"id": 82, "score": 5.0, "name": "Armani Code Parfum", "status": "tested", "owned": false, "profile": "iris; creamy amber", "notes": "Blir pudrete og kremete. Meh. Mitt på treet."}, {"id": 83, "score": 4.0, "name": "Guerlain Vetiver EDT (2)", "status": "estimated", "owned": false, "profile": "citrus; tobacco; vetiver", "notes": ""}, {"id": 84, "score": 4.0, "name": "Hermès H24", "status": "tested", "owned": false, "profile": "metallic; green", "notes": "Green metallic tone you disliked; never clicked; outside your profile."}, {"id": 85, "score": 4.0, "name": "Chanel Égoïste Platinum", "status": "tested", "owned": false, "profile": "barbershop fougère", "notes": "Barbershop fougère, floral-soapy, classic; started okay then fell off; ultimately disliked."}, {"id": 86, "score": 3.0, "name": "Creed Viking", "status": "estimated", "owned": false, "profile": "aromatic pepper; mint; dry woods", "notes": ""}, {"id": 87, "score": 3.0, "name": "Encre Noire", "status": "estimated", "owned": false, "profile": "dark vetiver; earthy", "notes": ""}, {"id": 88, "score": 1.0, "name": "Prada L'Homme / Milano", "status": "estimated", "owned": false, "profile": "powdery; iris", "notes": ""}, {"id": 89, "score": 1.0, "name": "Tom Ford Tobacco Vanille", "status": "estimated", "owned": false, "profile": "vanilla; sweet; dense", "notes": ""}, {"id": 90, "score": 1.0, "name": "Amouage Reflection Man", "status": "estimated", "owned": false, "profile": "floral; powdery", "notes": ""}];
+
+// ============ STATE ============
+let data = [];
+let sha = null;          // current file sha on GitHub
+let dirty = false;       // unsaved local changes
+let openId = null;
+let editId = null;
+let adding = false;
+let search = "";
+let filter = "all";
+let syncMsg = "Laster fra GitHub...";
+let syncCls = "";
+
+const sc = s => s >= 9 ? "var(--gold)" : s >= 7.5 ? "var(--green)" : s >= 6 ? "var(--blue)" : s >= 4 ? "var(--gray)" : "var(--red)";
+const esc = s => (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const token = () => localStorage.getItem(TOKEN_KEY) || "";
+const apiUrl = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_PATH}`;
+
+// ============ GITHUB IO ============
+function b64encode(str){ return btoa(unescape(encodeURIComponent(str))); }
+function b64decode(str){ return decodeURIComponent(escape(atob(str))); }
+
+async function loadFromGitHub() {
+  try {
+    const r = await fetch(apiUrl + "?ref=" + GH_BRANCH, {
+      headers: { "Accept": "application/vnd.github+json", ...(token() ? {Authorization: "Bearer " + token()} : {}) },
+      cache: "no-store"
+    });
+    if (r.status === 404) {
+      // file doesn't exist yet -> seed locally, mark dirty so first save creates it
+      data = SEED_DATA; sha = null; dirty = true;
+      syncMsg = "Ingen data.json ennå – trykk Lagre for å opprette"; syncCls = "dirty";
+      return;
+    }
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    const j = await r.json();
+    sha = j.sha;
+    data = JSON.parse(b64decode(j.content));
+    dirty = false;
+    syncMsg = "Synket med GitHub"; syncCls = "ok";
+  } catch(e) {
+    // fall back to seed
+    data = SEED_DATA; sha = null; dirty = true;
+    syncMsg = "Kunne ikke laste (" + e.message + ") – bruker innebygd kopi"; syncCls = "err";
+  }
+}
+
+async function saveToGitHub() {
+  if (!token()) { openTokenModal(); return; }
+  syncMsg = "Lagrer..."; syncCls = ""; render();
+  try {
+    const body = {
+      message: "Oppdater parfymearkiv " + new Date().toISOString(),
+      content: b64encode(JSON.stringify(data, null, 2)),
+      branch: GH_BRANCH,
+      ...(sha ? { sha } : {})
+    };
+    const r = await fetch(apiUrl, {
+      method: "PUT",
+      headers: { "Accept": "application/vnd.github+json", "Authorization": "Bearer " + token(), "Content-Type": "application/json" },
+      body: JSON.stringify(body)
+    });
+    if (!r.ok) {
+      const t = await r.text();
+      throw new Error("HTTP " + r.status + (r.status===401?" – ugyldig token":r.status===409?" – konflikt, last på nytt":""));
+    }
+    const j = await r.json();
+    sha = j.content.sha;
+    dirty = false;
+    syncMsg = "Lagret til GitHub ✔"; syncCls = "ok";
+  } catch(e) {
+    syncMsg = "Lagring feilet: " + e.message; syncCls = "err";
+  }
+  render();
+}
+
+function markDirty(){ dirty = true; syncMsg = "Ulagrede endringer"; syncCls = "dirty"; }
+
+// ============ TOKEN MODAL ============
+let showToken = false;
+function openTokenModal(){ showToken = true; render(); }
+function saveToken(){
+  const v = document.getElementById("tok-input").value.trim();
+  if (v) localStorage.setItem(TOKEN_KEY, v);
+  showToken = false; render();
+}
+function clearToken(){ localStorage.removeItem(TOKEN_KEY); showToken = false; render(); }
+
+// ============ CRUD ============
+let form = {};
+function startAdd(){ form = {name:"",score:"",status:"estimated",owned:false,profile:"",notes:""}; adding = true; editId = null; openId = null; render(); }
+function startEdit(f){ form = {...f}; editId = f.id; adding = false; render(); }
+function cancelForm(){ adding = false; editId = null; render(); }
+function setF(k,v){ form[k] = v; }
+
+function saveForm(){
+  if (!form.name || form.score === "") return;
+  if (editId != null) {
+    data = data.map(f => f.id === editId ? {...form, id: editId, score: parseFloat(form.score)} : f);
+  } else {
+    const maxId = data.reduce((m,f) => Math.max(m, f.id), 0);
+    data.push({...form, id: maxId + 1, score: parseFloat(form.score)});
+  }
+  data.sort((a,b) => b.score - a.score);
+  adding = false; editId = null;
+  markDirty(); render();
+}
+function delItem(id){
+  if (!confirm("Slett denne duften?")) return;
+  data = data.filter(f => f.id !== id);
+  openId = null; markDirty(); render();
+}
+
+// ============ FILTER ============
+function visible(){
+  return data
+    .filter(f => filter==="tested"?f.status==="tested":filter==="estimated"?f.status!=="tested":filter==="owned"?f.owned:filter==="t1"?f.score>=9:filter==="t2"?(f.score>=7.5&&f.score<9):true)
+    .filter(f => !search || f.name.toLowerCase().includes(search.toLowerCase()) || (f.profile||"").toLowerCase().includes(search.toLowerCase()))
+    .sort((a,b) => b.score - a.score);
+}
+
+// ============ RENDER ============
+function render(){
+  const app = document.getElementById("app");
+  const list = visible();
+  const tested = data.filter(f=>f.status==="tested").length;
+  const owned = data.filter(f=>f.owned).length;
+  const t1 = data.filter(f=>f.score>=9).length;
+
+  const filters = [["all","Alle"],["tested","Testet"],["estimated","Estimert"],["owned","★ Eier"],["t1","9+"],["t2","7.5–8.5"]];
+
+  let html = `
+  <div class="header">
+    <div><div class="sub">DUFT-DNA · GITHUB</div><div class="title">Parfymearkiv</div></div>
+    <button class="btn btn-new" onclick="startAdd()">+ NY</button>
+  </div>
+
+  <div class="sync-bar">
+    <span class="sync-status ${syncCls}">${esc(syncMsg)}</span>
+    <button class="btn btn-sync" onclick="${dirty ? 'saveToGitHub()' : 'reload()'}">${dirty ? 'LAGRE' : 'OPPDATER'}</button>
+    <button class="btn btn-key" onclick="openTokenModal()">${token() ? '🔑' : 'TOKEN'}</button>
+  </div>
+
+  <div class="controls">
+    <input class="search" placeholder="Søk..." value="${esc(search)}" oninput="search=this.value;render()">
+    <div class="filters">
+      ${filters.map(([v,l]) => `<button class="filter ${filter===v?'active':''}" onclick="filter='${v}';render()">${l}</button>`).join("")}
+    </div>
+  </div>
+
+  <div class="stats">
+    <span><b>${data.length}</b>Totalt</span><span><b>${tested}</b>Testet</span><span><b>${owned}</b>Eier</span><span><b>${t1}</b>9+</span>
+  </div>
+
+  ${adding ? formHtml(false) : ""}
+
+  ${list.map(f => rowHtml(f)).join("")}
+  ${list.length === 0 ? '<div class="empty-list">INGEN RESULTATER</div>' : ""}
+  `;
+
+  if (showToken) html += tokenModalHtml();
+
+  app.innerHTML = html;
+}
+
+function rowHtml(f){
+  const isOpen = openId === f.id;
+  const isEdit = editId === f.id;
+  let h = `<div>`;
+  h += `<div class="row ${isOpen||isEdit?'open':''}" onclick="${isEdit?'':'toggle('+f.id+')'}">
+    <div class="score" style="color:${sc(f.score)}">${f.score}</div>
+    <div style="flex:1;min-width:0">
+      <div class="name">${esc(f.name)}${f.owned?' <span style="color:var(--gold);font-size:10px">★</span>':''}</div>
+      ${f.profile?`<div class="prof">${esc(f.profile)}</div>`:''}
+    </div>
+    <div class="dot" style="background:${f.status==='tested'?'var(--green)':'#252535'}"></div>
+  </div>`;
+  if (isOpen && !isEdit) {
+    h += `<div class="detail">
+      ${f.notes ? `<div class="notes">${esc(f.notes)}</div>` : `<div class="empty">IKKE TESTET</div>`}
+      <div class="detail-actions">
+        <button class="btn btn-edit" onclick="startEdit(${JSON.stringify(f).replace(/"/g,'&quot;')})">REDIGER</button>
+        <button class="btn btn-del" onclick="delItem(${f.id})">SLETT</button>
+      </div>
+    </div>`;
+  }
+  if (isEdit) h += formHtml(true);
+  h += `</div>`;
+  return h;
+}
+
+function formHtml(inline){
+  return `<div class="form ${inline?'inline':''}">
+    <label>${editId!=null?'REDIGER':'NY DUFT'}</label>
+    <label>NAVN</label>
+    <input value="${esc(form.name)}" oninput="setF('name',this.value)">
+    <div class="form-row">
+      <div><label>SCORE</label><input type="number" step="0.5" min="0" max="10" value="${esc(String(form.score))}" oninput="setF('score',this.value)"></div>
+      <div><label>STATUS</label><select onchange="setF('status',this.value)">
+        <option value="estimated" ${form.status==='estimated'?'selected':''}>Estimert</option>
+        <option value="tested" ${form.status==='tested'?'selected':''}>Testet</option>
+      </select></div>
+    </div>
+    <label>PROFIL</label>
+    <input value="${esc(form.profile)}" oninput="setF('profile',this.value)">
+    <label>NOTATER</label>
+    <textarea rows="3" oninput="setF('notes',this.value)">${esc(form.notes)}</textarea>
+    <div class="checkrow"><input type="checkbox" id="own" ${form.owned?'checked':''} onchange="setF('owned',this.checked)"><label for="own">EIER DENNE</label></div>
+    <div class="form-actions">
+      <button class="btn btn-save" onclick="saveForm()">OK</button>
+      <button class="btn btn-cancel" onclick="cancelForm()">AVBRYT</button>
+    </div>
+  </div>`;
+}
+
+function tokenModalHtml(){
+  return `<div class="modal-bg" onclick="if(event.target===this){showToken=false;render()}">
+    <div class="modal">
+      <h3>GitHub-token</h3>
+      <p>Limes inn for å lagre endringer til GitHub. Lagres kun lokalt i denne nettleseren – sendes aldri andre steder. Trenger Contents: Read and write på repoet.</p>
+      <input id="tok-input" type="password" placeholder="github_pat_..." value="${esc(token())}">
+      <div class="modal-actions">
+        <button class="btn btn-save" onclick="saveToken()">LAGRE TOKEN</button>
+        ${token()?'<button class="btn btn-del" onclick="clearToken()">FJERN</button>':''}
+        <button class="btn btn-cancel" onclick="showToken=false;render()">LUKK</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function toggle(id){ openId = openId === id ? null : id; render(); }
+async function reload(){ syncMsg="Laster..."; syncCls=""; render(); await loadFromGitHub(); render(); }
+
+// ============ INIT ============
+(async function(){
+  await loadFromGitHub();
+  render();
+})();
+</script>
+</body>
+</html>
