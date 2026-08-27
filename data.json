@@ -189,6 +189,24 @@
     "notes": ""
   },
   {
+    "id": 35,
+    "score": 8,
+    "name": "Burberry Hero Parfum",
+    "status": "estimated",
+    "owned": false,
+    "profile": "best i linjen, tørrere og mer samlet; mørkere tre, mindre friskhet, mer kontroll",
+    "notes": ""
+  },
+  {
+    "name": "Maison Alhambra Jorge Di Profumo",
+    "score": 8,
+    "status": "tested",
+    "owned": true,
+    "profile": "Kjølig/mineralsk (ADG Profumo-clone); bergamott, lavendel, tobakk, vetiver, sandeltre\"",
+    "notes": "ADG Profumo-clone, kjølig/mineral akse. Bitter bergamott + luftig åpning, nesten ingen pepper; urteaktig/tørr midtfase uten sødme eller vetiver-signal; drydown lander tørt på sandeltre, ingen kollaps. Oppleves veldig nær originalen. Uvanlig sterk clone-kvalitet for prisklassen.",
+    "id": 91
+  },
+  {
     "id": 22,
     "score": 7.5,
     "name": "Tom Ford Oud Mineral",
@@ -304,15 +322,6 @@
     "owned": false,
     "profile": "tørr, mørk, strukturert, woody, varm",
     "notes": "ok. ren, frisk, men demper seg til behagelig wood. ikke en kjøpskandidat. ganske svak."
-  },
-  {
-    "id": 35,
-    "score": 8,
-    "name": "Burberry Hero Parfum",
-    "status": "estimated",
-    "owned": false,
-    "profile": "best i linjen, tørrere og mer samlet; mørkere tre, mindre friskhet, mer kontroll",
-    "notes": ""
   },
   {
     "id": 36,
@@ -468,6 +477,24 @@
     "notes": ""
   },
   {
+    "id": 65,
+    "score": 7,
+    "name": "Dior Homme Intense 2020",
+    "status": "tested",
+    "owned": false,
+    "profile": "tørr amber/cedar; kardemomme; mørk krydder",
+    "notes": "Elegant åpning med kardemomme og mørk krydder; strukturen holder overraskende godt inn i midtfasen, men drydown kollapser mot pudret iris og mister kontur. Blant de beste i sjangeren, men ikke en kjøpskandidat."
+  },
+  {
+    "name": "Maison Alhambra Jorge di Profondo (Deep Blue)",
+    "score": 7,
+    "status": "tested",
+    "owned": true,
+    "profile": "Kjølig/mineralsk, akvatisk (ADG Profondo-clone); sjønoter, rosmarin, sypress, patchouli, amber",
+    "notes": "ADG Profondo-clone, kjølig/mineral akse. Akvatisk/salt åpning med svakt (mulig feiltolket) floralt innslag; midtfase mykt grønn-floral (rosmarin/lavendel/sypress) uten barbershop-karakter; drydown lander på en tydelig, strukturert 'kremet-akvatisk' akkord, ikke kollaps. Provisorisk 7/10, avhengig av stabilitet ved lengre bæretid",
+    "id": 92
+  },
+  {
     "id": 53,
     "score": 6.5,
     "name": "Chanel Égoïste EDT",
@@ -574,15 +601,6 @@
     "owned": false,
     "profile": "dry vetiver; moss; citrus",
     "notes": "Har ikke notes, men den var ok, ikke noe spesielt. Ok fra base og ut."
-  },
-  {
-    "id": 65,
-    "score": 7,
-    "name": "Dior Homme Intense 2020",
-    "status": "tested",
-    "owned": false,
-    "profile": "tørr amber/cedar; kardemomme; mørk krydder",
-    "notes": "Elegant åpning med kardemomme og mørk krydder; strukturen holder overraskende godt inn i midtfasen, men drydown kollapser mot pudret iris og mister kontur. Blant de beste i sjangeren, men ikke en kjøpskandidat."
   },
   {
     "id": 66,
