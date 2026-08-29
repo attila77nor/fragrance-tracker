@@ -37,12 +37,12 @@
   },
   {
     "id": 5,
-    "score": 9,
+    "score": 6,
     "name": "Prada Luna Rossa Black",
     "status": "tested",
-    "owned": false,
-    "profile": "varm, tørr, mørk amber uten sødme",
-    "notes": "Helt super. Minner mye om the ONE EDP, men litt mindre varm, litt mer uplifting og uformell. Super"
+    "owned": true,
+    "profile": "Woody Amber; tonka/coumarin-base; varm, tørr, mørk amber",
+    "notes": "Revidert ned fra 9 – ved lengre bæretid og gjentatt testing viste den seg varmere/søtere enn idealet, og drydown myknet mer enn det provisoriske 7,5–8-estimatet fra mai antok. Fortsatt elegant og brukbar, men ikke lenger et ankerpunkt"
   },
   {
     "id": 6,
