@@ -9,87 +9,6 @@
     "notes": "Perfect dry amberwood balance; elegant, warm, refined; signature-level from opening to base."
   },
   {
-  "id": 95,
-  "score": 7.5,
-  "name": "Loewe 7 Cobalt EDP",
-  "status": "tested",
-  "owned": false,
-  "profile": "Kjølig/mineralsk; urteaktig og tørr; mørkere og mindre polert enn Bleu de Chanel",
-  "notes": "Balansert åpning, holder seg gjennom midtfase; elegant fremfor vulgær, mindre ambroxan-drevet enn typiske konkurrenter. Lyst til å lukte igjen bekreftet i alle faser. Kjøpskandidat."
-},
-{
-  "id": 96,
-  "score": 5,
-  "name": "Moncler Pour Homme EDP",
-  "status": "tested",
-  "owned": false,
-  "profile": "Kjølig/jordete; våt sopp-karakter",
-  "notes": "Våt sopp/såpete-jordete gjennom alle faser. No-buy."
-},
-{
-  "id": 97,
-  "score": 5,
-  "name": "Bad Boy Cobalt Elixir (Carolina Herrera)",
-  "status": "tested",
-  "owned": false,
-  "profile": "Varm/krydret åpning; myk søt frukt-kollaps i base",
-  "notes": "Pepper og svakt jordete i åpning, ingen sødme først; utvikler søt, myk fruktighet i midtfase som avrunder basen – myk kollaps bekreftet. No-buy."
-},
-{
-  "id": 98,
-  "score": 6.5,
-  "name": "Narciso Rodriguez For Him Musc Santal (2026)",
-  "status": "tested",
-  "owned": false,
-  "profile": "Grønn/aromatisk fougère-åpning; tørr sedertre/sandeltre-drydown",
-  "notes": "Åpner grønt/aromatisk (salvie, einer) – fougère-hjerte som forventet skulle feile, men drydown går tørt og strukturert. Teknisk bestått, ingen emosjonell trekkraft; leser som 'moden eldre mann'. No-buy."
-},
-{
-  "id": 99,
-  "score": 4,
-  "name": "Prada Luna Rossa Ocean EDP",
-  "status": "tested",
-  "owned": false,
-  "profile": "Kjølig/syntetisk amberwood; skarp",
-  "notes": "Syntetisk/skarp amberwood-kollaps, trigget hodepine. No-buy."
-},
-{
-  "id": 100,
-  "score": 7,
-  "name": "Versace Man Eau Fraîche Extreme",
-  "status": "tested",
-  "owned": false,
-  "profile": "Fougère-hjerte (lavendel/salvie/geranium); tørr sedertre-drydown",
-  "notes": "Fougère-notene i hjertet overlever ikke til drydown – lander tørt på sedertre med moderat moskus. Genuin lyst til å lukte igjen. 5 timers holdbarhet til svak duft. Provisorisk 7/10, pending full retest."
-},
-{
-  "id": 101,
-  "score": 5.25,
-  "name": "Dior Homme Cologne (2022)",
-  "status": "tested",
-  "owned": false,
-  "profile": "Kjølig/fersk; moskus-base med kremet/såpete kant",
-  "notes": "Friskeste åpningen i parallelltest mot Sport, men lineær og 'litt kjedelig'; drydown moskus med lett kremethet og såpete kant – bekreftet dusjgel-svikt. No-buy."
-},
-{
-  "id": 102,
-  "score": 6.25,
-  "name": "Dior Homme Sport (2021)",
-  "status": "tested",
-  "owned": false,
-  "profile": "Sitrus-åpning med tørr, røykfull kontrast (olibanum/elemi); myk/musky drydown",
-  "notes": "Tørr, røykfull kvalitet under sitrusåpningen ga strukturell interesse; midtveis skiftet appellen fra 'tørr røyk trekker meg inn' til 'behagelig/komfortabel' – varselsmønster. Drydown musky, lett kremet, svakt såpete. Ikke definitiv kjøpskandidat."
-},
-{
-  "id": 103,
-  "score": 6,
-  "name": "Narciso Rodriguez Bleu Noir Parfum",
-  "status": "tested",
-  "owned": false,
-  "profile": "Mørkere tolkning av Bleu Noir; kollapser til tung base",
-  "notes": "Kollapser til tung/kvelende base i drydown. EDP anbefales i stedet."
-}
-  {
     "id": 2,
     "score": 9,
     "name": "Acqua di Giò Elixir",
@@ -189,13 +108,13 @@
     "notes": ""
   },
   {
-  "id": 13,
-  "score": 6.5,
-  "name": "Terre d'Hermès Eau Givrée",
-  "status": "tested",
-  "owned": false,
-  "profile": "mineral; tidligere ansett tørr/balansert, revidert til for grønn/skarp",
-  "notes": "Revidert ned fra 8/10 etter senere testing – oppleves nå som for grønn og skarp. Var tidligere hovedbevis for at tørr/mineralsk vetiver kunne fungere; revisjonen svekker det unntaket betydelig."
+    "id": 13,
+    "score": 6.5,
+    "name": "Terre d'Hermès Eau Givrée",
+    "status": "tested",
+    "owned": false,
+    "profile": "mineral; tidligere ansett tørr/balansert, revidert til for grønn/skarp",
+    "notes": "Revidert ned fra 8/10 etter senere testing – oppleves nå som for grønn og skarp. Var tidligere hovedbevis for at tørr/mineralsk vetiver kunne fungere; revisjonen svekker det unntaket betydelig."
   },
   {
     "id": 14,
@@ -261,22 +180,22 @@
     "notes": ""
   },
   {
-  "id": 21,
-  "score": 7,
-  "name": "Narciso Rodriguez Bleu Noir EDP",
-  "status": "tested",
-  "owned": false,
-  "profile": "Kjølig/mineralsk; clean musk/cedar/pepper; grenser til såpe ved lang bæretid",
-  "notes": "Initial edge/kompleksitet (antatt woody) holder den unna standard 'fresh/clean'; ved forlenget bæretid dukker økende såpethet opp. Revidert ned fra 8 til 7."
+    "id": 21,
+    "score": 7,
+    "name": "Narciso Rodriguez Bleu Noir EDP",
+    "status": "tested",
+    "owned": false,
+    "profile": "Kjølig/mineralsk; clean musk/cedar/pepper; grenser til såpe ved lang bæretid",
+    "notes": "Initial edge/kompleksitet (antatt woody) holder den unna standard 'fresh/clean'; ved forlenget bæretid dukker økende såpethet opp. Revidert ned fra 8 til 7."
   },
   {
-    "name": "Maison Alhambra Jorge Di Profumo",
+    "id": 91,
     "score": 8,
+    "name": "Maison Alhambra Jorge Di Profumo",
     "status": "tested",
     "owned": true,
-    "profile": "Kjølig/mineralsk (ADG Profumo-clone); bergamott, lavendel, tobakk, vetiver, sandeltre\"",
-    "notes": "ADG Profumo-clone, kjølig/mineral akse. Bitter bergamott + luftig åpning, nesten ingen pepper; urteaktig/tørr midtfase uten sødme eller vetiver-signal; drydown lander tørt på sandeltre, ingen kollaps. Oppleves veldig nær originalen. Uvanlig sterk clone-kvalitet for prisklassen.",
-    "id": 91
+    "profile": "Kjølig/mineralsk (ADG Profumo-clone); bergamott, lavendel, tobakk, vetiver, sandeltre",
+    "notes": "ADG Profumo-clone, kjølig/mineral akse. Bitter bergamott + luftig åpning, nesten ingen pepper; urteaktig/tørr midtfase uten sødme eller vetiver-signal; drydown lander tørt på sandeltre, ingen kollaps. Oppleves veldig nær originalen. Uvanlig sterk clone-kvalitet for prisklassen."
   },
   {
     "id": 22,
@@ -306,13 +225,13 @@
     "notes": ""
   },
   {
-    "name": "Lattafa Dynasty",
+    "id": 93,
     "score": 7.5,
+    "name": "Lattafa Dynasty",
     "status": "tested",
     "owned": true,
-    "profile": "\"Woody Spicy (offisiell klassifisering); fresh-spicy åpning, te/semsket skinn-hjerte, tørr wood-drydown; bergamott, ingefær, salvie, bringebær; rooibos-te, semsket skinn; sedertre, cashmeran, amberwood\"",
-    "notes": "\"Bringebær/semsket skinn-åpning feminint/hudkrem-aktig, ikke fullt på profil. Rooibos-te-midt gir nisjekompleksitet – karaktergivende note, ikke dominerende akkord. Sedertre/cashmeran-drydown elegant og strukturert – 8–9/10 isolert. Drydown redder en åpning som ikke er 100% på profil. Bekreftet kjøp",
-    "id": 93
+    "profile": "Woody Spicy (offisiell klassifisering); fresh-spicy åpning, te/semsket skinn-hjerte, tørr wood-drydown; bergamott, ingefær, salvie, bringebær; rooibos-te, semsket skinn; sedertre, cashmeran, amberwood",
+    "notes": "Bringebær/semsket skinn-åpning feminint/hudkrem-aktig, ikke fullt på profil. Rooibos-te-midt gir nisjekompleksitet – karaktergivende note, ikke dominerende akkord. Sedertre/cashmeran-drydown elegant og strukturert – 8–9/10 isolert. Drydown redder en åpning som ikke er 100% på profil. Bekreftet kjøp."
   },
   {
     "id": 25,
@@ -567,13 +486,31 @@
     "notes": "Elegant åpning med kardemomme og mørk krydder; strukturen holder overraskende godt inn i midtfasen, men drydown kollapser mot pudret iris og mister kontur. Blant de beste i sjangeren, men ikke en kjøpskandidat."
   },
   {
-    "name": "Maison Alhambra Jorge di Profondo (Deep Blue)",
+    "id": 92,
     "score": 7,
+    "name": "Maison Alhambra Jorge di Profondo (Deep Blue)",
     "status": "tested",
     "owned": true,
     "profile": "Kjølig/mineralsk, akvatisk (ADG Profondo-clone); sjønoter, rosmarin, sypress, patchouli, amber",
-    "notes": "ADG Profondo-clone, kjølig/mineral akse. Akvatisk/salt åpning med svakt (mulig feiltolket) floralt innslag; midtfase mykt grønn-floral (rosmarin/lavendel/sypress) uten barbershop-karakter; drydown lander på en tydelig, strukturert 'kremet-akvatisk' akkord, ikke kollaps. Provisorisk 7/10, avhengig av stabilitet ved lengre bæretid",
-    "id": 92
+    "notes": "ADG Profondo-clone, kjølig/mineral akse. Akvatisk/salt åpning med svakt (mulig feiltolket) floralt innslag; midtfase mykt grønn-floral (rosmarin/lavendel/sypress) uten barbershop-karakter; drydown lander på en tydelig, strukturert 'kremet-akvatisk' akkord, ikke kollaps. Provisorisk 7/10, avhengig av stabilitet ved lengre bæretid."
+  },
+  {
+    "id": 94,
+    "score": 7,
+    "name": "Lattafa Suqraat",
+    "status": "tested",
+    "owned": true,
+    "profile": "Aromatic (offisiell klassifisering); ADG Profumo-dupe; bergamott, ingefær; lavendel, fiolenblad; moskus, sandeltre, amber",
+    "notes": "Lettere og friskere enn Profumo-originalen, svakere styrke/sillage. Ellers på ADG-DNA – ingen ny informasjon eller avvik fra etablert mønster."
+  },
+  {
+    "id": 100,
+    "score": 7,
+    "name": "Versace Man Eau Fraîche Extreme",
+    "status": "tested",
+    "owned": false,
+    "profile": "Fougère-hjerte (lavendel/salvie/geranium); tørr sedertre-drydown",
+    "notes": "Fougère-notene i hjertet overlever ikke til drydown – lander tørt på sedertre med moderat moskus. Genuin lyst til å lukte igjen. 5 timers holdbarhet til svak duft. Provisorisk 7/10, pending full retest."
   },
   {
     "id": 53,
@@ -601,6 +538,15 @@
     "owned": false,
     "profile": "clean woody-aromatic; ambroxan; elegant",
     "notes": "blant de bedre sommerduftene, som betyr ren, frisk, strukturert men uten mye dybde. noe grøntish som jeg ikke helt klarer å like kjempegodt i dry down. på grensen til 6"
+  },
+  {
+    "id": 98,
+    "score": 6.5,
+    "name": "Narciso Rodriguez For Him Musc Santal (2026)",
+    "status": "tested",
+    "owned": false,
+    "profile": "Grønn/aromatisk fougère-åpning; tørr sedertre/sandeltre-drydown",
+    "notes": "Åpner grønt/aromatisk (salvie, einer) – fougère-hjerte som forventet skulle feile, men drydown går tørt og strukturert. Teknisk bestått, ingen emosjonell trekkraft; leser som 'moden eldre mann'. No-buy."
   },
   {
     "id": 56,
@@ -738,6 +684,24 @@
     "notes": ""
   },
   {
+    "id": 103,
+    "score": 6,
+    "name": "Narciso Rodriguez Bleu Noir Parfum",
+    "status": "tested",
+    "owned": false,
+    "profile": "Mørkere tolkning av Bleu Noir; kollapser til tung base",
+    "notes": "Kollapser til tung/kvelende base i drydown. EDP anbefales i stedet."
+  },
+  {
+    "id": 102,
+    "score": 6.25,
+    "name": "Dior Homme Sport (2021)",
+    "status": "tested",
+    "owned": false,
+    "profile": "Sitrus-åpning med tørr, røykfull kontrast (olibanum/elemi); myk/musky drydown",
+    "notes": "Tørr, røykfull kvalitet under sitrusåpningen ga strukturell interesse; midtveis skiftet appellen fra 'tørr røyk trekker meg inn' til 'behagelig/komfortabel' – varselsmønster. Drydown musky, lett kremet, svakt såpete. Ikke definitiv kjøpskandidat."
+  },
+  {
     "id": 72,
     "score": 5,
     "name": "Initio Parfums Privés",
@@ -837,6 +801,42 @@
     "notes": "Blir pudrete og kremete. Meh. Mitt på treet."
   },
   {
+    "id": 96,
+    "score": 5,
+    "name": "Moncler Pour Homme EDP",
+    "status": "tested",
+    "owned": false,
+    "profile": "Kjølig/jordete; våt sopp-karakter",
+    "notes": "Våt sopp/såpete-jordete gjennom alle faser. No-buy."
+  },
+  {
+    "id": 97,
+    "score": 5,
+    "name": "Bad Boy Cobalt Elixir (Carolina Herrera)",
+    "status": "tested",
+    "owned": false,
+    "profile": "Varm/krydret åpning; myk søt frukt-kollaps i base",
+    "notes": "Pepper og svakt jordete i åpning, ingen sødme først; utvikler søt, myk fruktighet i midtfase som avrunder basen – myk kollaps bekreftet. No-buy."
+  },
+  {
+    "id": 101,
+    "score": 5.25,
+    "name": "Dior Homme Cologne (2022)",
+    "status": "tested",
+    "owned": false,
+    "profile": "Kjølig/fersk; moskus-base med kremet/såpete kant",
+    "notes": "Friskeste åpningen i parallelltest mot Sport, men lineær og 'litt kjedelig'; drydown moskus med lett kremethet og såpete kant – bekreftet dusjgel-svikt. No-buy."
+  },
+  {
+    "id": 105,
+    "score": 5.5,
+    "name": "Gucci Guilty Pour Homme Parfum",
+    "status": "tested",
+    "owned": false,
+    "profile": "Woody Aromatic; einer/lavendel-åpning, patchouli/tørr tre-base",
+    "notes": "Testet mot Bleu de Chanel Parfum side om side, 3,5t bæretid. Åpning einer-dominert og ubestemmelig grønt, minimal sitrus – ikke på profil. Midtfase roer seg til 'behagelig', tørr/musky uten kremet/søtt patchouli-preg. Drydown medium struktur, tørr/musky holder seg, men svak emosjonell respons. Ikke kjøpskandidat."
+  },
+  {
     "id": 83,
     "score": 4,
     "name": "Guerlain Vetiver EDT (2)",
@@ -862,6 +862,15 @@
     "owned": false,
     "profile": "barbershop fougère",
     "notes": "Barbershop fougère, floral-soapy, classic; started okay then fell off; ultimately disliked."
+  },
+  {
+    "id": 99,
+    "score": 4,
+    "name": "Prada Luna Rossa Ocean EDP",
+    "status": "tested",
+    "owned": false,
+    "profile": "Kjølig/syntetisk amberwood; skarp",
+    "notes": "Syntetisk/skarp amberwood-kollaps, trigget hodepine. No-buy."
   },
   {
     "id": 86,
@@ -909,84 +918,21 @@
     "notes": ""
   },
   {
-  "id": 95,
-  "score": 7.5,
-  "name": "Loewe 7 Cobalt EDP",
-  "status": "tested",
-  "owned": false,
-  "profile": "Kjølig/mineralsk; urteaktig og tørr; mørkere og mindre polert enn Bleu de Chanel",
-  "notes": "Balansert åpning, holder seg gjennom midtfase; elegant fremfor vulgær, mindre ambroxan-drevet enn typiske konkurrenter. Lyst til å lukte igjen bekreftet i alle faser. Kjøpskandidat."
+    "id": 95,
+    "score": 7.5,
+    "name": "Loewe 7 Cobalt EDP",
+    "status": "tested",
+    "owned": false,
+    "profile": "Kjølig/mineralsk; urteaktig og tørr; mørkere og mindre polert enn Bleu de Chanel",
+    "notes": "Balansert åpning, holder seg gjennom midtfase; elegant fremfor vulgær, mindre ambroxan-drevet enn typiske konkurrenter. Lyst til å lukte igjen bekreftet i alle faser. Kjøpskandidat."
   },
   {
-  "id": 96,
-  "score": 5,
-  "name": "Moncler Pour Homme EDP",
-  "status": "tested",
-  "owned": false,
-  "profile": "Kjølig/jordete; våt sopp-karakter",
-  "notes": "Våt sopp/såpete-jordete gjennom alle faser. No-buy."
-  },
-  {
-  "id": 97,
-  "score": 5,
-  "name": "Bad Boy Cobalt Elixir (Carolina Herrera)",
-  "status": "tested",
-  "owned": false,
-  "profile": "Varm/krydret åpning; myk søt frukt-kollaps i base",
-  "notes": "Pepper og svakt jordete i åpning, ingen sødme først; utvikler søt, myk fruktighet i midtfase som avrunder basen – myk kollaps bekreftet. No-buy."
-  },
-  {
-  "id": 98,
-  "score": 6.5,
-  "name": "Narciso Rodriguez For Him Musc Santal (2026)",
-  "status": "tested",
-  "owned": false,
-  "profile": "Grønn/aromatisk fougère-åpning; tørr sedertre/sandeltre-drydown",
-  "notes": "Åpner grønt/aromatisk (salvie, einer) – fougère-hjerte som forventet skulle feile, men drydown går tørt og strukturert. Teknisk bestått, ingen emosjonell trekkraft; leser som 'moden eldre mann'. No-buy."
-  },
-  {
-  "id": 99,
-  "score": 4,
-  "name": "Prada Luna Rossa Ocean EDP",
-  "status": "tested",
-  "owned": false,
-  "profile": "Kjølig/syntetisk amberwood; skarp",
-  "notes": "Syntetisk/skarp amberwood-kollaps, trigget hodepine. No-buy."
-  },
-  {
-  "id": 100,
-  "score": 7,
-  "name": "Versace Man Eau Fraîche Extreme",
-  "status": "tested",
-  "owned": false,
-  "profile": "Fougère-hjerte (lavendel/salvie/geranium); tørr sedertre-drydown",
-  "notes": "Fougère-notene i hjertet overlever ikke til drydown – lander tørt på sedertre med moderat moskus. Genuin lyst til å lukte igjen. 5 timers holdbarhet til svak duft. Provisorisk 7/10, pending full retest."
-  },
-  {
-  "id": 101,
-  "score": 5.25,
-  "name": "Dior Homme Cologne (2022)",
-  "status": "tested",
-  "owned": false,
-  "profile": "Kjølig/fersk; moskus-base med kremet/såpete kant",
-  "notes": "Friskeste åpningen i parallelltest mot Sport, men lineær og 'litt kjedelig'; drydown moskus med lett kremethet og såpete kant – bekreftet dusjgel-svikt. No-buy."
-  },
-  {
-  "id": 102,
-  "score": 6.25,
-  "name": "Dior Homme Sport (2021)",
-  "status": "tested",
-  "owned": false,
-  "profile": "Sitrus-åpning med tørr, røykfull kontrast (olibanum/elemi); myk/musky drydown",
-  "notes": "Tørr, røykfull kvalitet under sitrusåpningen ga strukturell interesse; midtveis skiftet appellen fra 'tørr røyk trekker meg inn' til 'behagelig/komfortabel' – varselsmønster. Drydown musky, lett kremet, svakt såpete. Ikke definitiv kjøpskandidat."
-  },
-  {
-  "id": 103,
-  "score": 6,
-  "name": "Narciso Rodriguez Bleu Noir Parfum",
-  "status": "tested",
-  "owned": false,
-  "profile": "Mørkere tolkning av Bleu Noir; kollapser til tung base",
-  "notes": "Kollapser til tung/kvelende base i drydown. EDP anbefales i stedet."
+    "id": 104,
+    "score": 8.5,
+    "name": "Bleu de Chanel Parfum",
+    "status": "tested",
+    "owned": false,
+    "profile": "Woody Aromatic; kjølig/tørr sitrus-åpning, fougère-hjerte (lavendel/geranium) uten overlevelse til drydown, sandeltre/cedar/amberwood/tonka-base",
+    "notes": "Testet mot Gucci Guilty Parfum side om side, 3,5t bæretid. Åpning elegant og tørr med dempet ambroxan og lett sitrus. Midtfase relativt lineær, sitrus dempes. Drydown: tre holder, mykner til 'ren' (ikke kremet) med svak varme/krydder (nutmeg/labdanum). Tydelig oppgradering fra EDP (7/10, ingen emosjonell trekkraft) – klar kjøpskandidat. Bekrefter DNA-presisering: fougère i hjerte (lavendel/geranium) manifesterer seg ikke på hud og er ikke diskvalifiserende når det ikke overlever til drydown. Tredje bekreftende datapunkt for dette prinsippet."
   }
 ]
