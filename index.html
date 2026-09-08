@@ -31,6 +31,12 @@ body { font-family: Georgia, serif; background: var(--bg); color: var(--text); m
 .row .name { font-size: 13px; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .row .prof { font-size: 11px; color: var(--dim); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-top: 2px; }
 .row .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.role { font-family: ui-monospace, monospace; font-size: 8px; letter-spacing: 0.12em; padding: 2px 5px; border: 1px solid; margin-left: 6px; vertical-align: middle; }
+.role-frontier { color: var(--gold); border-color: var(--gold); }
+.role-reference { color: var(--green); border-color: var(--green); }
+.role-wardrobe { color: var(--dim); border-color: var(--dim); }
+.filter.frontier.active { border-color: var(--gold); color: var(--gold); }
+.filter.reference.active { border-color: var(--green); color: var(--green); }
 .detail { padding: 8px 14px 14px 55px; background: var(--panel); border-bottom: 1px solid var(--line-soft); }
 .detail .notes { font-size: 12px; color: #7a7870; line-height: 1.75; border-left: 2px solid #222230; padding-left: 10px; margin-bottom: 10px; }
 .detail .empty { font-size: 11px; color: #252535; font-family: ui-monospace, monospace; margin-bottom: 10px; letter-spacing: 0.08em; }
@@ -167,8 +173,8 @@ function clearToken(){ localStorage.removeItem(TOKEN_KEY); showToken = false; re
 
 // ============ CRUD ============
 let form = {};
-function startAdd(){ form = {name:"",score:"",status:"estimated",owned:false,profile:"",notes:""}; adding = true; editId = null; openId = null; render(); }
-function startEdit(f){ form = {...f}; editId = f.id; adding = false; render(); }
+function startAdd(){ form = {name:"",score:"",status:"estimated",owned:false,role:"frontier",profile:"",notes:""}; adding = true; editId = null; openId = null; render(); }
+function startEdit(f){ form = {role:"wardrobe", ...f}; editId = f.id; adding = false; render(); }
 function cancelForm(){ adding = false; editId = null; render(); }
 function setF(k,v){ form[k] = v; }
 
@@ -193,8 +199,8 @@ function delItem(id){
 // ============ FILTER ============
 function visible(){
   return data
-    .filter(f => filter==="tested"?f.status==="tested":filter==="estimated"?f.status!=="tested":filter==="owned"?f.owned:filter==="t1"?f.score>=9:filter==="t2"?(f.score>=7.5&&f.score<9):true)
-    .filter(f => !search || f.name.toLowerCase().includes(search.toLowerCase()) || (f.profile||"").toLowerCase().includes(search.toLowerCase()))
+    .filter(f => filter==="tested"?f.status==="tested":filter==="estimated"?f.status!=="tested":filter==="owned"?f.owned:filter==="t1"?f.score>=9:filter==="t2"?(f.score>=7.5&&f.score<9):(filter==="frontier"||filter==="reference"||filter==="wardrobe")?(f.role||"wardrobe")===filter:true)
+    .filter(f => !search || f.name.toLowerCase().includes(search.toLowerCase()) || (f.profile||"").toLowerCase().includes(search.toLowerCase()) || (f.role||"").includes(search.toLowerCase()))
     .sort((a,b) => b.score - a.score);
 }
 
@@ -205,8 +211,9 @@ function render(){
   const tested = data.filter(f=>f.status==="tested").length;
   const owned = data.filter(f=>f.owned).length;
   const t1 = data.filter(f=>f.score>=9).length;
+  const fr = data.filter(f=>f.role==='frontier').length;
 
-  const filters = [["all","Alle"],["tested","Testet"],["estimated","Estimert"],["owned","★ Eier"],["t1","9+"],["t2","7.5–8.5"]];
+  const filters = [["all","Alle"],["frontier","⟡ Frontier"],["reference","Referanse"],["wardrobe","Garderobe"],["tested","Testet"],["estimated","Estimert"],["owned","★ Eier"],["t1","9+"],["t2","7.5–8.5"]];
 
   let html = `
   <div class="header">
@@ -223,12 +230,12 @@ function render(){
   <div class="controls">
     <input class="search" placeholder="Søk..." value="${esc(search)}" oninput="search=this.value;render()">
     <div class="filters">
-      ${filters.map(([v,l]) => `<button class="filter ${filter===v?'active':''}" onclick="filter='${v}';render()">${l}</button>`).join("")}
+      ${filters.map(([v,l]) => `<button class="filter ${v} ${filter===v?'active':''}" onclick="filter='${v}';render()">${l}</button>`).join("")}
     </div>
   </div>
 
   <div class="stats">
-    <span><b>${data.length}</b>Totalt</span><span><b>${tested}</b>Testet</span><span><b>${owned}</b>Eier</span><span><b>${t1}</b>9+</span>
+    <span><b>${data.length}</b>Totalt</span><span><b>${tested}</b>Testet</span><span><b>${owned}</b>Eier</span><span><b>${t1}</b>9+</span><span><b>${fr}</b>Frontier</span>
   </div>
 
   ${adding ? formHtml(false) : ""}
@@ -249,7 +256,7 @@ function rowHtml(f){
   h += `<div class="row ${isOpen||isEdit?'open':''}" onclick="${isEdit?'':'toggle('+f.id+')'}">
     <div class="score" style="color:${sc(f.score)}">${f.score}</div>
     <div style="flex:1;min-width:0">
-      <div class="name">${esc(f.name)}${f.owned?' <span style="color:var(--gold);font-size:10px">★</span>':''}</div>
+      <div class="name">${esc(f.name)}${f.owned?' <span style="color:var(--gold);font-size:10px">★</span>':''}${f.role&&f.role!=='wardrobe'?`<span class="role role-${f.role}">${f.role==='frontier'?'⟡ FRONTIER':'REF'}</span>`:''}</div>
       ${f.profile?`<div class="prof">${esc(f.profile)}</div>`:''}
     </div>
     <div class="dot" style="background:${f.status==='tested'?'var(--green)':'#252535'}"></div>
@@ -280,6 +287,12 @@ function formHtml(inline){
         <option value="tested" ${form.status==='tested'?'selected':''}>Testet</option>
       </select></div>
     </div>
+    <label>ROLLE</label>
+    <select onchange="setF('role',this.value)">
+      <option value="frontier" ${form.role==='frontier'?'selected':''}>Frontier – utfall usikkert, vil oppdatere DNA</option>
+      <option value="reference" ${form.role==='reference'?'selected':''}>Referanse – hudtestet, forankrer en akse</option>
+      <option value="wardrobe" ${form.role==='wardrobe'?'selected':''}>Garderobe – kjent territorium</option>
+    </select>
     <label>PROFIL</label>
     <input value="${esc(form.profile)}" oninput="setF('profile',this.value)">
     <label>NOTATER</label>
