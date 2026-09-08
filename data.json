@@ -281,13 +281,13 @@
   },
   {
     "id": 121,
-    "score": 7.5,
+    "score": 8.5,
     "name": "Armani Privé Bois d'Encens EDP",
-    "status": "estimated",
+    "status": "tested",
     "owned": false,
-    "role": "frontier",
-    "profile": "Woody / Incense; svart pepper, hvit røkelse, sedertre, vetiver",
-    "notes": "Estimat 7–8,5. Kald, tørr røkelse over sedertre – kandidat som fjerde inngang til Tørr wood-drydownen. Flagg: kan oppleves kirkeaktig/ensom; vetiver oppgitt i base. F&L, 3 900 kr, på nettlager."
+    "role": "reference",
+    "profile": "Woody / Dry Wood; røkelse, rosa pepper, sedertre, vetiver-antydning; tørr røkelse/wood-base",
+    "notes": "Hudtest 08.09.2026 side-by-side mot Amouage Epic. Åpning 7,5: varm røkelse (ikke kald/mineralsk som forventet), svak sillage, nysgjerrig+behagelig. Mid 8: varm, relativt tørr, Sprite-aktig sitrus/lime-friskhet fra frankincense, kvae kun helt inntil hud, kant mot det myke. Drydown 8,5 (4 t): tørr røkelse/wood, kant intakt, elegant rund fra start og uendret, hudnær. Sterk emosjonell pull – 'veldig, veldig bra'. Kjøp anbefalt. Fjerde inngang til Tørr wood (røkelse). Prediksjon om myk kollaps slo ikke til: strukturert softness, ikke tap av kontur. Eneste svakhet: ytelse. DNA-signal: behagelig+nysgjerrig sammen er ikke varsel; rund tekstur fra start er ikke kollaps."
   },
   {
     "id": 21,
@@ -653,11 +653,11 @@
     "id": 127,
     "score": 7,
     "name": "Amouage Epic Man",
-    "status": "estimated",
+    "status": "tested",
     "owned": false,
-    "role": "frontier",
-    "profile": "Woody Spicy / Incense; rosa pepper, spisskummen, kardemomme, safran; myrra, røkelse, oud, geranium; sandeltre, amber, musk",
-    "notes": "Estimat 6,5–7,5. Tørr krydder-inngang til samme mørke tekstur som Interlude, mindre røyk. Flagg: amber i base, spisskummen kan bli skarp. F&L / KICKS."
+    "role": "wardrobe",
+    "profile": "Amber / Woody Amber; kumin, safran, rosa pepper; geranium, myrra, røkelse; oud, sandeltre, patchouli",
+    "notes": "Hudtest 08.09.2026 side-by-side mot Bois d'Encens. Identifisert vs Interlude på fravær av tung røyk. Åpning 7: tørr kumin/safran, ikke svett, diffust harpiks-slør, nysgjerrig. Mid 7,5: harpiks tørr og mineralsk (myrra/røkelse), krydder leder, svak te. Drydown 7 (4 t): mørkt treverk/dyrisk oud leder, urter og varmt krydder henger igjen, lite klissete, sterk ytelse. Liker den, bedre enn lignende testet før, ingen 10-følelse. No-buy. Bekrefter Varm/krydret-aksen uten å flytte den; urter i base lite minus."
   },
   {
     "id": 129,
