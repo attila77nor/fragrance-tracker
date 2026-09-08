@@ -5,6 +5,7 @@
     "name": "YSL L'Homme Le Parfum",
     "status": "tested",
     "owned": true,
+    "role": "reference",
     "profile": "dry amberwood; warm; elegant",
     "notes": "Perfect dry amberwood balance; elegant, warm, refined; signature-level from opening to base."
   },
@@ -14,6 +15,7 @@
     "name": "Acqua di Giò Elixir",
     "status": "tested",
     "owned": true,
+    "role": "reference",
     "profile": "woody-amber; refined; warm fresh",
     "notes": "Smooth, elegant, fresh-woody; natural and warm without synthetic edge; loved throughout all phases; clear Tier 1."
   },
@@ -23,8 +25,9 @@
     "name": "Matière Première Bois d'Ébène",
     "status": "estimated",
     "owned": false,
-    "profile": "cedar; vetiver; dry wood",
-    "notes": ""
+    "role": "frontier",
+    "profile": "Woody / Dry Wood; ibenholt, sedertre, patchouli, sandeltre, tørr røyk",
+    "notes": "Estimat 8,5–9,5. Høyeste uprøvde estimat i trackeren. Bekreftet tilgjengelig hos Gimle Parfymeri (parfymeri.no) sept. 2026 – prioritet 1 for hudtest. Test: holder ibenholt-tørrheten hele veien, eller mykner patchouli/sandeltre i drydown?"
   },
   {
     "id": 4,
@@ -32,17 +35,9 @@
     "name": "Creed Aventus",
     "status": "tested",
     "owned": false,
+    "role": "reference",
     "profile": "smoky; textured ambergris; natural",
     "notes": "Dry, textured woody-amber; fruity top fades to addictive smoky base; top-tier and intoxicating."
-  },
-  {
-    "id": 5,
-    "score": 6,
-    "name": "Prada Luna Rossa Black",
-    "status": "tested",
-    "owned": true,
-    "profile": "Woody Amber; tonka/coumarin-base; varm, tørr, mørk amber",
-    "notes": "Revidert ned fra 9 – ved lengre bæretid og gjentatt testing viste den seg varmere/søtere enn idealet, og drydown myknet mer enn det provisoriske 7,5–8-estimatet fra mai antok. Fortsatt elegant og brukbar, men ikke lenger et ankerpunkt"
   },
   {
     "id": 6,
@@ -50,6 +45,7 @@
     "name": "Dolce Gabbana The One Parfum",
     "status": "tested",
     "owned": false,
+    "role": "reference",
     "profile": "NB: nyhet. Ikke edp, men Parfum.",
     "notes": "Åpning: Tørr, klar struktur; umiddelbart gjenkjennelig The One-DNA. Hjerte: Strammer seg, mørkere og renere enn EDP. Drydown: Svært tørr, mørk og strukturert; mer ryggrad enn EDP. Oppsummert: lik EDP, men litt mørkere og litt mer strukturert. De kan gå over i hverandre, trenger ikke eie begge to i parallell. gjerne forsøke denne neste gang"
   },
@@ -59,8 +55,29 @@
     "name": "YSL Y Intense",
     "status": "tested",
     "owned": false,
+    "role": "reference",
     "profile": "Skal matche mitt DNA bedre enn edp. Tørrere Mindre søt Mer ambroxan-drevet. Dette er også en risiko, om denne blir metallisk",
     "notes": "Overraskende god match: struktur øker i midtfasen og ender i tørr, varm base uten ambroxan-kollaps. Bedre enn YSL Y EDP"
+  },
+  {
+    "id": 104,
+    "score": 8.5,
+    "name": "Bleu de Chanel Parfum",
+    "status": "tested",
+    "owned": false,
+    "role": "reference",
+    "profile": "Woody Aromatic; kjølig/tørr sitrus-åpning, fougère-hjerte (lavendel/geranium) uten overlevelse til drydown, sandeltre/cedar/amberwood/tonka-base",
+    "notes": "Testet mot Gucci Guilty Parfum side om side, 3,5t bæretid. Åpning elegant og tørr med dempet ambroxan og lett sitrus. Midtfase relativt lineær, sitrus dempes. Drydown: tre holder, mykner til 'ren' (ikke kremet) med svak varme/krydder (nutmeg/labdanum). Tydelig oppgradering fra EDP (7/10, ingen emosjonell trekkraft) – klar kjøpskandidat. Bekrefter DNA-presisering: fougère i hjerte (lavendel/geranium) manifesterer seg ikke på hud og er ikke diskvalifiserende når det ikke overlever til drydown. Tredje bekreftende datapunkt for dette prinsippet."
+  },
+  {
+    "id": 130,
+    "score": 8.5,
+    "name": "YSL La Nuit de L'Homme EDT",
+    "status": "tested",
+    "owned": false,
+    "role": "reference",
+    "profile": "Varm/krydret; kardemomme, eleganse. Bekreftet hud/full – notenivå ukjent, retest planlagt",
+    "notes": "Husket: kardemomme og eleganse. Uvanlig lekker. Drydown-oppførsel på hud ikke dokumentert; ingen DNA-konsekvens før strukturert faseinndelt retest (lavendel ja/nei; base tørr/myk; vetiver grønn/jordet/fraværende; sødme stigende/fallende)."
   },
   {
     "id": 8,
@@ -68,6 +85,7 @@
     "name": "D&G The One EDP",
     "status": "tested",
     "owned": true,
+    "role": "reference",
     "profile": "warm amber; tobacco; smooth",
     "notes": "Warm, elegant spice; slightly sweet but refined; weaker performance; still top-tier signature feel."
   },
@@ -77,6 +95,7 @@
     "name": "YSL Y EDP",
     "status": "tested",
     "owned": true,
+    "role": "reference",
     "profile": "fresh-warm amberwood; clean",
     "notes": "Fresh opening, structured warm amberwood heart; drydown retains core DNA but softer; liker all phases, men litt juvenile/enkel"
   },
@@ -86,6 +105,7 @@
     "name": "Xerjoff Uden",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "Tørr sitrus. Elegant rom-aktig varme",
     "notes": ""
   },
@@ -95,6 +115,7 @@
     "name": "Cartier - Déclaration Parfum",
     "status": "estimated",
     "owned": false,
+    "role": "frontier",
     "profile": "Kardemomme, Tørr krydder, Sedertre, Lett læraktig varme, Lav sødme, Ingen pudder",
     "notes": ""
   },
@@ -104,17 +125,9 @@
     "name": "En fra Svensk Parfym",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "rolig, nordisk, tørr, nesten asketisk",
     "notes": ""
-  },
-  {
-    "id": 13,
-    "score": 6.5,
-    "name": "Terre d'Hermès Eau Givrée",
-    "status": "tested",
-    "owned": false,
-    "profile": "mineral; tidligere ansett tørr/balansert, revidert til for grønn/skarp",
-    "notes": "Revidert ned fra 8/10 etter senere testing – oppleves nå som for grønn og skarp. Var tidligere hovedbevis for at tørr/mineralsk vetiver kunne fungere; revisjonen svekker det unntaket betydelig."
   },
   {
     "id": 14,
@@ -122,6 +135,7 @@
     "name": "Bleu de chanel Parfum",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "Tørrere og mer rett i strukturen. Mindre fluffy musk enn EDP",
     "notes": ""
   },
@@ -131,6 +145,7 @@
     "name": "Acqua di Parma – Colonia Oud",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "tørr oud-tre, ren, ikke søt (ikke arabisk)",
     "notes": ""
   },
@@ -140,6 +155,7 @@
     "name": "Acqua di Giò Profumo",
     "status": "tested",
     "owned": false,
+    "role": "reference",
     "profile": "som elixir, men i den kjølige aksen",
     "notes": "som elixir i midten. åpningen er litt mer spiss, og dry down mykere. god."
   },
@@ -149,6 +165,7 @@
     "name": "Dior Homme 2020",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "dry cedar; clean vetiver; modern elegant",
     "notes": ""
   },
@@ -158,6 +175,7 @@
     "name": "He Wood Rocky Mountain Wood – DSquared",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "dry cedar; mineral; airy smoke",
     "notes": ""
   },
@@ -167,6 +185,7 @@
     "name": "Zara Black Pepper & Cedarwood",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "tolkning av Creed Royal Oud – tørr, krydret trenote; sort pepper, mild rose og massivt sedertre",
     "notes": ""
   },
@@ -176,17 +195,9 @@
     "name": "Explorer Ultra Black",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "mørkere pepper/woody, fortsatt tørr",
     "notes": ""
-  },
-  {
-    "id": 21,
-    "score": 7,
-    "name": "Narciso Rodriguez Bleu Noir EDP",
-    "status": "tested",
-    "owned": false,
-    "profile": "Kjølig/mineralsk; clean musk/cedar/pepper; grenser til såpe ved lang bæretid",
-    "notes": "Initial edge/kompleksitet (antatt woody) holder den unna standard 'fresh/clean'; ved forlenget bæretid dukker økende såpethet opp. Revidert ned fra 8 til 7."
   },
   {
     "id": 91,
@@ -194,8 +205,19 @@
     "name": "Maison Alhambra Jorge Di Profumo",
     "status": "tested",
     "owned": true,
+    "role": "reference",
     "profile": "Kjølig/mineralsk (ADG Profumo-clone); bergamott, lavendel, tobakk, vetiver, sandeltre",
     "notes": "ADG Profumo-clone, kjølig/mineral akse. Bitter bergamott + luftig åpning, nesten ingen pepper; urteaktig/tørr midtfase uten sødme eller vetiver-signal; drydown lander tørt på sandeltre, ingen kollaps. Oppleves veldig nær originalen. Uvanlig sterk clone-kvalitet for prisklassen."
+  },
+  {
+    "id": 131,
+    "score": 8,
+    "name": "Cartier Déclaration EDT",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Woody Spicy; kardemomme, karve, bjørk, sedertre, vetiver, te i base",
+    "notes": "Estimat 7,5–8,5. Nærmeste strukturelle slektning til La Nuit EDT (8,5): tørrere, mer mineralsk, mindre lavendel. Eneste flagg: einer i hjertet. Prioritet 1 i La Nuit-sporet. Tilgjengelighet F&L/KICKS ubekreftet – spor aktivt. Parfum-versjonen ligger som id 11."
   },
   {
     "id": 22,
@@ -203,6 +225,7 @@
     "name": "Tom Ford Oud Mineral",
     "status": "tested",
     "owned": false,
+    "role": "reference",
     "profile": "mineral-salt; dry; tekstural",
     "notes": "Tørr, mineral-salt og strukturert gjennom hele utviklingen; holder kontur uten kollaps, oppleves interessant og annerledes enn din kjerne (mer tekstural enn polert). kan kjøpes. nana likte veldig godt på meg"
   },
@@ -212,6 +235,7 @@
     "name": "Roja Elysium Noir",
     "status": "tested",
     "owned": false,
+    "role": "reference",
     "profile": "sitrus/urter åpning; vetiver/sedertre hjerte; lær, ambergris, musk base",
     "notes": "Åpningen opplevdes litt for polert og kjølig, men i midtfasen ble den svært god – tørr woody struktur med kroppsnær, usøt varme"
   },
@@ -221,6 +245,7 @@
     "name": "Gucci Guilty Absolute Pour Homme",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "tørr, røkt tre/patchouli + hint av lær, nesten ingen sitrus i åpning",
     "notes": ""
   },
@@ -230,8 +255,49 @@
     "name": "Lattafa Dynasty",
     "status": "tested",
     "owned": true,
+    "role": "reference",
     "profile": "Woody Spicy (offisiell klassifisering); fresh-spicy åpning, te/semsket skinn-hjerte, tørr wood-drydown; bergamott, ingefær, salvie, bringebær; rooibos-te, semsket skinn; sedertre, cashmeran, amberwood",
     "notes": "Bringebær/semsket skinn-åpning feminint/hudkrem-aktig, ikke fullt på profil. Rooibos-te-midt gir nisjekompleksitet – karaktergivende note, ikke dominerende akkord. Sedertre/cashmeran-drydown elegant og strukturert – 8–9/10 isolert. Drydown redder en åpning som ikke er 100% på profil. Bekreftet kjøp."
+  },
+  {
+    "id": 95,
+    "score": 7.5,
+    "name": "Loewe 7 Cobalt EDP",
+    "status": "tested",
+    "owned": false,
+    "role": "reference",
+    "profile": "Kjølig/mineralsk; urteaktig og tørr; mørkere og mindre polert enn Bleu de Chanel",
+    "notes": "Balansert åpning, holder seg gjennom midtfase; elegant fremfor vulgær, mindre ambroxan-drevet enn typiske konkurrenter. Lyst til å lukte igjen bekreftet i alle faser. Kjøpskandidat."
+  },
+  {
+    "id": 106,
+    "score": 7.5,
+    "name": "Creed Absolu Aventus",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Fruity Chypre / Woody; ananas, ingefær, grønt eple; sandeltre, rosa pepper; musk, vetiver, eikemose",
+    "notes": "Estimat 7–8,5. Aventus-DNA med skarpere ingefær/sitrus-topp, mindre røyk, renere og mer musk-drevet drydown. Beste kandidat på listen ut fra DNA (Aventus 9/10). Rødt flagg: flere beskriver drydown som såpete/ren musk – én strukturell risiko, ikke veto. Tilgjengelig KICKS."
+  },
+  {
+    "id": 121,
+    "score": 7.5,
+    "name": "Armani Privé Bois d'Encens EDP",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Woody / Incense; svart pepper, hvit røkelse, sedertre, vetiver",
+    "notes": "Estimat 7–8,5. Kald, tørr røkelse over sedertre – kandidat som fjerde inngang til Tørr wood-drydownen. Flagg: kan oppleves kirkeaktig/ensom; vetiver oppgitt i base. F&L, 3 900 kr, på nettlager."
+  },
+  {
+    "id": 21,
+    "score": 7,
+    "name": "Narciso Rodriguez Bleu Noir EDP",
+    "status": "tested",
+    "owned": false,
+    "role": "reference",
+    "profile": "Kjølig/mineralsk; clean musk/cedar/pepper; grenser til såpe ved lang bæretid",
+    "notes": "Initial edge/kompleksitet (antatt woody) holder den unna standard 'fresh/clean'; ved forlenget bæretid dukker økende såpethet opp. Revidert ned fra 8 til 7."
   },
   {
     "id": 25,
@@ -239,6 +305,7 @@
     "name": "Bottega Veneta Pour Homme Extreme",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "The One EDP, men mer moden, tørrere og mer elegant",
     "notes": ""
   },
@@ -248,6 +315,7 @@
     "name": "Mancera Cedrat Boisé",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "Strukturert sitrus i topp. Tørrere og mørkere base enn original",
     "notes": "Testet. Helt ok. men sprayet lite, den var nesten tom. Kunne godt testet en gang til"
   },
@@ -257,6 +325,7 @@
     "name": "Ormonde Jayne Montabaco Intensivo",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "Tørr tobakk, læraktig varme, litt aromatisk friskhet i topp, myk hudnær base",
     "notes": ""
   },
@@ -266,6 +335,7 @@
     "name": "Terre d'Hermès Parfum",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "Tettere og mer konsentrert, fortsatt tørr. Varmere mineral/tre. Kan bli litt tung på huden.",
     "notes": ""
   },
@@ -275,6 +345,7 @@
     "name": "Nishane Hacivat",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "Tørr, strukturert frukt + eikemose",
     "notes": "Tørr og stabil struktur hele veien; god arkitektur men litt klassisk chypre-signatur som gir svakt old-school-preg. Lavere score enn estimert"
   },
@@ -284,6 +355,7 @@
     "name": "Mancera Aoud Lemon Mint",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "tørr sitrus, mint, ren arkitektur",
     "notes": ""
   },
@@ -293,6 +365,7 @@
     "name": "Montblanc Explorer",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "vetiver; ambroxan; leather",
     "notes": "Kopi av Aventus Creed. Veldig god, men oppleves litt billig / enkel"
   },
@@ -302,6 +375,7 @@
     "name": "Amouage Opus XVI – Timber",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "krydret/røkelse topp (saffran, kardemomme); woody hjerte (patchouli, treverk); resinøs base (benzoin, amber)",
     "notes": "Åpningen var for røyk/lær-tung og skapte skepsis, men i midtfasen blendet den seg og utviklet en strukturert, lett kremet kroppsnær varme uten kollaps; opplevdes svært god i drydown"
   },
@@ -311,6 +385,7 @@
     "name": "YSL Y Elixir",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "karakterfull og tørr designer-amberwood/ambroxan",
     "notes": "Åpning: Tørr og stram; presis, med lett blå/mineral friskhet. Hjerte: Ren og korrekt; friskheten trekker seg tilbake. Drydown: For glatt/polert; mister særpreg og kroppsnærhet. EDP-en er adskillig bedre. (Dette skal være den beste av flankerne)"
   },
@@ -320,6 +395,7 @@
     "name": "Loewe 7 Anonimo",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "tørr, mørk, strukturert, woody, varm",
     "notes": "ok. ren, frisk, men demper seg til behagelig wood. ikke en kjøpskandidat. ganske svak."
   },
@@ -329,6 +405,7 @@
     "name": "Burberry Hero EDT",
     "status": "tested",
     "owned": true,
+    "role": "wardrobe",
     "profile": "spicy-woody; fresh",
     "notes": "Natural spicy-woody freshness; great opening and heart; base becomes soft/babypowder-ish; overall very good."
   },
@@ -338,6 +415,7 @@
     "name": "Amouage Overture Man EDP",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "mer woody/amber og mindre gourmandy enn enkelte andre Amouage-dufter",
     "notes": ""
   },
@@ -347,6 +425,7 @@
     "name": "Guerlain Vetiver EDT",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "tørr, jordlig vetiver + cedar uten grønn aromatikk",
     "notes": ""
   },
@@ -356,6 +435,7 @@
     "name": "Guerlain Homme EDP",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "Mojito-inspirert (lime/mint), cedertre og vetiver; mint-noten kan være grønn-aromatisk",
     "notes": ""
   },
@@ -365,6 +445,7 @@
     "name": "Bleu de Chanel EDP",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "clean sandalwood; smooth woody",
     "notes": "Elegant, balanced, smooth; refined but slightly too soft/feminine in late drydown; pleasant, not top tier."
   },
@@ -374,6 +455,7 @@
     "name": "Gisada Titanium EDP",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "tørrere, maskulin struktur med pepper/woody noter",
     "notes": ""
   },
@@ -383,6 +465,7 @@
     "name": "Prada Amber Pour Homme",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "tørr amber, ren, ikke søt",
     "notes": ""
   },
@@ -392,6 +475,7 @@
     "name": "Gentlemen Only – Givenchy",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "spicy cedar; dry vetiver; refined musk",
     "notes": ""
   },
@@ -401,6 +485,7 @@
     "name": "Sander for Men – Jil Sander",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "dry woods; pepper spice; elegant incense",
     "notes": ""
   },
@@ -410,6 +495,7 @@
     "name": "Zara Extreme 6.0",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "tolkning av YSL L'Homme Le Parfum Intense",
     "notes": ""
   },
@@ -419,6 +505,7 @@
     "name": "Terre d'Hermès EDT",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "vetiver; cedar; mineral; pepper",
     "notes": ""
   },
@@ -428,6 +515,7 @@
     "name": "YSL Y Parfum",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "warm amber; sweet edge",
     "notes": ""
   },
@@ -437,6 +525,7 @@
     "name": "Molecule 01 + Patchouli",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "",
     "notes": ""
   },
@@ -446,6 +535,7 @@
     "name": "Ormonde Man",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "juniper; vetiver; cedar; spices",
     "notes": ""
   },
@@ -455,6 +545,7 @@
     "name": "Montblanc Black Meisterstück",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "røkelse/vetiver – tørr dybde uten sødme",
     "notes": ""
   },
@@ -464,6 +555,7 @@
     "name": "Montblanc Vetiver Glacier",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "potensielt TdH-ish struktur, men white musk kan gjøre den for myk",
     "notes": ""
   },
@@ -473,6 +565,7 @@
     "name": "Chanel Sycomore",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "smoky vetiver; dry cedar",
     "notes": ""
   },
@@ -482,6 +575,7 @@
     "name": "Dior Homme Intense 2020",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "tørr amber/cedar; kardemomme; mørk krydder",
     "notes": "Elegant åpning med kardemomme og mørk krydder; strukturen holder overraskende godt inn i midtfasen, men drydown kollapser mot pudret iris og mister kontur. Blant de beste i sjangeren, men ikke en kjøpskandidat."
   },
@@ -491,6 +585,7 @@
     "name": "Maison Alhambra Jorge di Profondo (Deep Blue)",
     "status": "tested",
     "owned": true,
+    "role": "frontier",
     "profile": "Kjølig/mineralsk, akvatisk (ADG Profondo-clone); sjønoter, rosmarin, sypress, patchouli, amber",
     "notes": "ADG Profondo-clone, kjølig/mineral akse. Akvatisk/salt åpning med svakt (mulig feiltolket) floralt innslag; midtfase mykt grønn-floral (rosmarin/lavendel/sypress) uten barbershop-karakter; drydown lander på en tydelig, strukturert 'kremet-akvatisk' akkord, ikke kollaps. Provisorisk 7/10, avhengig av stabilitet ved lengre bæretid."
   },
@@ -500,6 +595,7 @@
     "name": "Lattafa Suqraat",
     "status": "tested",
     "owned": true,
+    "role": "wardrobe",
     "profile": "Aromatic (offisiell klassifisering); ADG Profumo-dupe; bergamott, ingefær; lavendel, fiolenblad; moskus, sandeltre, amber",
     "notes": "Lettere og friskere enn Profumo-originalen, svakere styrke/sillage. Ellers på ADG-DNA – ingen ny informasjon eller avvik fra etablert mønster."
   },
@@ -509,8 +605,89 @@
     "name": "Versace Man Eau Fraîche Extreme",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "Fougère-hjerte (lavendel/salvie/geranium); tørr sedertre-drydown",
     "notes": "Fougère-notene i hjertet overlever ikke til drydown – lander tørt på sedertre med moderat moskus. Genuin lyst til å lukte igjen. 5 timers holdbarhet til svak duft. Provisorisk 7/10, pending full retest."
+  },
+  {
+    "id": 122,
+    "score": 7,
+    "name": "D.S. & Durga Bowmakers",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Woody / Resinous; lønn, harpiks (kolofonium), sypress, sedertre, sandeltre",
+    "notes": "Estimat 6,5–8. Snekkerverksted-tørt – ingen krydder, frukt eller sitrus som inngang. Ren tekstur-test på Tørr wood. Flagg: harpiks kan bli søtlig-balsamisk hvis den dominerer. Gimle (merke bekreftet, sjekk varen i butikk)."
+  },
+  {
+    "id": 123,
+    "score": 7,
+    "name": "Le Labo Santal 33",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Woody / Leather; kardemomme, iris, fiol; sandeltre, sedertre, lær, papyrus, ambrox",
+    "notes": "Estimat 6,5–8. Tørr, røykaktig sandeltre med lærkant – tekstural, ikke polert. Flagg: iris/fiol i hjertet – testes under v3.7-regelen (kun drydown avgjør). Risiko: for allestedsnærværende/'kjent'. F&L."
+  },
+  {
+    "id": 125,
+    "score": 7,
+    "name": "Le Labo Thé Noir 29",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Woody / Tea; svart te, bergamot, fiken; laurbær, sedertre; høy, tobakk, vetiver, musk",
+    "notes": "Estimat 6,5–8. Direkte test av te-regelen: te med mørkt anker (høy/tobakk/sedertre), motsatt av Marwa. Flagg: vetiver i base. Risiko: leser 'stilig eldre mann' som Musc Santal. F&L."
+  },
+  {
+    "id": 126,
+    "score": 7,
+    "name": "Amouage Interlude Man",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Amber / Woody Incense; oregano, pepper, bergamot; røkelse, opoponax, labdanum; oud, lær, sandeltre, patchouli",
+    "notes": "Estimat 6–8, bredt med vilje. Grensetest for mørk tekstur: røyk/røkelse på kanten til harpiks-masse. Ett tydelig flagg (amber/labdanum i hjertet). Ingen brukbar klone. F&L / KICKS."
+  },
+  {
+    "id": 127,
+    "score": 7,
+    "name": "Amouage Epic Man",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Woody Spicy / Incense; rosa pepper, spisskummen, kardemomme, safran; myrra, røkelse, oud, geranium; sandeltre, amber, musk",
+    "notes": "Estimat 6,5–7,5. Tørr krydder-inngang til samme mørke tekstur som Interlude, mindre røyk. Flagg: amber i base, spisskummen kan bli skarp. F&L / KICKS."
+  },
+  {
+    "id": 129,
+    "score": 7,
+    "name": "Essential Parfums Bois Impérial",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Woody / Spicy; basilikum, rosa pepper, svart pepper; akigalawood, patchouli, ambrocenide; sedertre, vetiver, ambroxan",
+    "notes": "Estimat 6,5–7,5. Skarpt, tørt, moderne wood – nedre grense-test: hvor tørr/syntetisk kan Tørr wood bli før pull forsvinner. Flagg: ambroxan/vetiver i base, kan lese metallisk. Rimelig for nisje. F&L."
+  },
+  {
+    "id": 132,
+    "score": 7,
+    "name": "Dior Sauvage Elixir",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Spicy / Amber; kardemomme, lavendel, lakris; sandeltre, amber",
+    "notes": "Estimat 6,5–7,5. Deler kardemomme/lavendel-kjernen med La Nuit, men lakris + sandeltre gir sødme/kremethet-risiko i drydown. Frontier: tester om kardemomme-strukturen overlever en tyngre base. Bekreftet F&L. Klone: Lattafa Asad."
+  },
+  {
+    "id": 13,
+    "score": 6.5,
+    "name": "Terre d'Hermès Eau Givrée",
+    "status": "tested",
+    "owned": false,
+    "role": "wardrobe",
+    "profile": "mineral; tidligere ansett tørr/balansert, revidert til for grønn/skarp",
+    "notes": "Revidert ned fra 8/10 etter senere testing – oppleves nå som for grønn og skarp. Var tidligere hovedbevis for at tørr/mineralsk vetiver kunne fungere; revisjonen svekker det unntaket betydelig."
   },
   {
     "id": 53,
@@ -518,6 +695,7 @@
     "name": "Chanel Égoïste EDT",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "tørr åpning; varm kanel/krydder",
     "notes": "Tørr og tydelig struktur, men utvikler seg til varm kanel/krydder-fylde som føles litt klassisk og faller noe i attraktivitet."
   },
@@ -527,6 +705,7 @@
     "name": "Acqua di Parma – Colonia Intensa",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "tørr, elegant, struktur, lite sødme",
     "notes": "Som luksussåpe, med et old school/klassisk tilsnitt. Mye lavere enn estimert"
   },
@@ -536,6 +715,7 @@
     "name": "PDM Percival",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "clean woody-aromatic; ambroxan; elegant",
     "notes": "blant de bedre sommerduftene, som betyr ren, frisk, strukturert men uten mye dybde. noe grøntish som jeg ikke helt klarer å like kjempegodt i dry down. på grensen til 6"
   },
@@ -545,8 +725,79 @@
     "name": "Narciso Rodriguez For Him Musc Santal (2026)",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "Grønn/aromatisk fougère-åpning; tørr sedertre/sandeltre-drydown",
     "notes": "Åpner grønt/aromatisk (salvie, einer) – fougère-hjerte som forventet skulle feile, men drydown går tørt og strukturert. Teknisk bestått, ingen emosjonell trekkraft; leser som 'moden eldre mann'. No-buy."
+  },
+  {
+    "id": 112,
+    "score": 6.5,
+    "name": "Goldfield & Banks Pacific Rock Moss",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Fresh / Water-Aromatic; sitron, salvie, geranium; sedertre, mose, mineralsk/sjø-akkord",
+    "notes": "Estimat 6–7,5. Mest relevant på kjølig/mineralsk akse: sitrus + mineral + mose i tørr, lys struktur. Rødt flagg: salvie/geranium i hjertet – etter v3.7-prinsippet ikke diskvalifiserende hvis det ikke overlever til drydown. Risiko: for lett/tynn base, 'behagelig' uten pull. Verdt å teste som Water+Aromatic-referanse. F&L."
+  },
+  {
+    "id": 124,
+    "score": 6.5,
+    "name": "Kilian Sacred Wood",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Woody / Creamy; sandeltre, melk-akkord, sypress, copahu-balsam, sedertre",
+    "notes": "Estimat 6–7,5. Bevisst §7-test: strukturert kremethet uten sødme. Utfall avgjør signalet – holder = regel, kollapser = §7 lukkes. Flagg: melk/balsam kan gi myk kollaps. F&L / KICKS / Gimle."
+  },
+  {
+    "id": 128,
+    "score": 6.5,
+    "name": "Tom Ford Ombré Leather",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Leather / Floral Woody; kardemomme; lær, jasmin sambac; amber, mose, patchouli",
+    "notes": "Estimat 6–7,5. Lærgrensen: Dynasty-suede ble tålt, dette er tørt lær uten tjære. Flagg: hard disqualifier-kategori (tungt mørkt lær), amber i base. Klone: Maison Alhambra Amber & Leather. F&L / Gimle."
+  },
+  {
+    "id": 133,
+    "score": 6.5,
+    "name": "Lattafa Al Nashama Caprice",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Klone av La Nuit Bleu Électrique; kardemomme/ingefær; lavendel/geranium/mynte; amber/sedertre/vetiver",
+    "notes": "Estimat 6–7,5. Sikter på den tørrere La Nuit-søsteren. Flagg: lett pudder i hjertet og tyngre amber i base enn originalen. Hudtest, ikke blind buy. parfymeparadiset.no / csmegastore.no."
+  },
+  {
+    "id": 134,
+    "score": 6.5,
+    "name": "YSL La Nuit de L'Homme Le Parfum",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Samme skjelett som EDT, tettere og søtere (mer tonka)",
+    "notes": "Estimat 6–7. Grenseeksperiment: hvor mye sødme tåler La Nuit-skjelettet før det kollapser? Test etter EDT-retest. F&L/KICKS."
+  },
+  {
+    "id": 102,
+    "score": 6.25,
+    "name": "Dior Homme Sport (2021)",
+    "status": "tested",
+    "owned": false,
+    "role": "wardrobe",
+    "profile": "Sitrus-åpning med tørr, røykfull kontrast (olibanum/elemi); myk/musky drydown",
+    "notes": "Tørr, røykfull kvalitet under sitrusåpningen ga strukturell interesse; midtveis skiftet appellen fra 'tørr røyk trekker meg inn' til 'behagelig/komfortabel' – varselsmønster. Drydown musky, lett kremet, svakt såpete. Ikke definitiv kjøpskandidat."
+  },
+  {
+    "id": 5,
+    "score": 6,
+    "name": "Prada Luna Rossa Black",
+    "status": "tested",
+    "owned": true,
+    "role": "wardrobe",
+    "profile": "Woody Amber; tonka/coumarin-base; varm, tørr, mørk amber",
+    "notes": "Revidert ned fra 9 – ved lengre bæretid og gjentatt testing viste den seg varmere/søtere enn idealet, og drydown myknet mer enn det provisoriske 7,5–8-estimatet fra mai antok. Fortsatt elegant og brukbar, men ikke lenger et ankerpunkt"
   },
   {
     "id": 56,
@@ -554,6 +805,7 @@
     "name": "Roja Vetiver Pour Homme EDP",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "moderne, tørr, ren struktur med voksen eleganse",
     "notes": ""
   },
@@ -563,6 +815,7 @@
     "name": "Nishane Ani",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "høy risiko. strukturert vanilje",
     "notes": ""
   },
@@ -572,6 +825,7 @@
     "name": "MFK Masculin Pluriel",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "tørt treverk + lavintensitet varme. Mykhet som luft, ikke kosmetikk. Ekstremt kontrollert volum",
     "notes": ""
   },
@@ -581,6 +835,7 @@
     "name": "Issey Miyake Eau & Cèdre",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "tørr ceder; glir mot såpe/clean woody",
     "notes": "Starter riktig (tørr, tydelig ceder), men glir mot såpe/clean woody og blir for lett og litt feminin i uttrykket. Gjør lite galt, men mangler tyngde og definert struktur til å bli mer enn pent."
   },
@@ -590,6 +845,7 @@
     "name": "Creed Royal Oud",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "dry cedar; spice; ambergris",
     "notes": "det blir for voksent og en lukt som er god, men som jeg ikke synes er en parfyme-duft. litt feil akse"
   },
@@ -599,6 +855,7 @@
     "name": "Givenchy Gentleman Society Ambrée",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "amber; tobacco; vanilla",
     "notes": "Helt ok. Lavere enn estimat (8) - litt fougere-tendenser. Men er blant de beste i denne kategorien, for det er ok struktur og tørrhet gjennom hele."
   },
@@ -608,6 +865,7 @@
     "name": "Burberry Hero Parfum (testet)",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "best i serien; mest struktur/tilstedeværelse, men for varm/amber-orientert i basen",
     "notes": "dry down endte ganske kremet, men med noe mer struktur enn feks armani code og lignende, så 6."
   },
@@ -617,6 +875,7 @@
     "name": "The One Intense",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "floral/uplifting; unisex",
     "notes": "mindre struktur, mer floral/uplifting, mer unisex, mindre maskulin enn The One EDP. kan være fantastisk til nana?"
   },
@@ -626,6 +885,7 @@
     "name": "Tom Ford Grey Vetiver",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "dry vetiver; moss; citrus",
     "notes": "Har ikke notes, men den var ok, ikke noe spesielt. Ok fra base og ut."
   },
@@ -635,6 +895,7 @@
     "name": "Givenchy Gentleman Réserve Privée",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "tørr kakao/whisky-amber. mørk, elegant, moden",
     "notes": ""
   },
@@ -644,6 +905,7 @@
     "name": "Chanel Allure Homme Édition Blanche EDP",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "annen retning innen varm signaturzone",
     "notes": ""
   },
@@ -653,6 +915,7 @@
     "name": "Visit for Men – Azzaro",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "dry incense; textured cedar; urban amberwood",
     "notes": ""
   },
@@ -662,6 +925,7 @@
     "name": "YSL Vétiver",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "tørr, kjølig, frisk-tre struktur; clean, crisp, dry",
     "notes": ""
   },
@@ -671,6 +935,7 @@
     "name": "Zara Vibrant Leather",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "tolkning av Aventus Creed",
     "notes": ""
   },
@@ -680,6 +945,7 @@
     "name": "Bentley for Men Absolute",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "dry cedar; incense",
     "notes": ""
   },
@@ -689,17 +955,69 @@
     "name": "Narciso Rodriguez Bleu Noir Parfum",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "Mørkere tolkning av Bleu Noir; kollapser til tung base",
     "notes": "Kollapser til tung/kvelende base i drydown. EDP anbefales i stedet."
   },
   {
-    "id": 102,
-    "score": 6.25,
-    "name": "Dior Homme Sport (2021)",
+    "id": 107,
+    "score": 6,
+    "name": "Creed Aventus Cologne",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Fresh / Aromatic; mandarin, ingefær, rosa pepper; bjørk, patchouli, sandeltre; musk, tonka, vetiver",
+    "notes": "Estimat 5,5–6,5. Frisk, lys Aventus uten røyk og uten chypre-ryggrad. To røde flagg: dusjgel/ren-friskhet i drydown og tonka-mykning. Sannsynlig 'behagelig'-tilfelle. Begge butikker."
+  },
+  {
+    "id": 108,
+    "score": 6,
+    "name": "Nishane Wulong Cha",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Fresh / Citrus-tea; bergamot, appelsin; oolong-te, teblader; musk",
+    "notes": "Estimat 5,5–6,5. Lett, ren te-frisk, nesten lineær. Rødt flagg: lineær uten vertikal arkitektur; svak base. Interessant kun som test av te-territorium (jf. Dynasty-rooibos), men mangler tørr wood i bunn. Begge butikker."
+  },
+  {
+    "id": 111,
+    "score": 6,
+    "name": "Xerjoff Tony Iommi Deified",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Leather / Woody Spicy; safran, kanel, eple; rose, lær; papyrus, patchouli, mose, musk",
+    "notes": "Estimat 5,5–6,5. Mørk, krydret lær med rose; drydown patchouli/papyrus/mose, tørrere enn Monkey Special men 'ikke en tørr duft' ifølge reviewers. Røde flagg: mørkt lær, rose i hjertet, noe sødme. Ett mulig pluss: papyrus/mose-base kan ha tørr kant. Lav prioritet, men ikke uinteressant. Begge butikker."
+  },
+  {
+    "id": 113,
+    "score": 6,
+    "name": "BDK Oud Paradisio",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Woody Oud / Fruity; ananas, mandarin, safran; oud, lær; sandeltre, ambergris, vanilje",
+    "notes": "Estimat 5,5–6,5. Ananas/oud-kontrast er interessant på papiret (Aventus-frukt + tørr oud), men base med ambergris/vanilje kan mykne. Ett rødt flagg (vanilje i base), ellers usikkert notebilde – notepyramiden bør verifiseres før test. Svært dyr; test kun på hud i butikk. F&L."
+  },
+  {
+    "id": 105,
+    "score": 5.5,
+    "name": "Gucci Guilty Pour Homme Parfum",
     "status": "tested",
     "owned": false,
-    "profile": "Sitrus-åpning med tørr, røykfull kontrast (olibanum/elemi); myk/musky drydown",
-    "notes": "Tørr, røykfull kvalitet under sitrusåpningen ga strukturell interesse; midtveis skiftet appellen fra 'tørr røyk trekker meg inn' til 'behagelig/komfortabel' – varselsmønster. Drydown musky, lett kremet, svakt såpete. Ikke definitiv kjøpskandidat."
+    "role": "wardrobe",
+    "profile": "Woody Aromatic; einer/lavendel-åpning, patchouli/tørr tre-base",
+    "notes": "Testet mot Bleu de Chanel Parfum side om side, 3,5t bæretid. Åpning einer-dominert og ubestemmelig grønt, minimal sitrus – ikke på profil. Midtfase roer seg til 'behagelig', tørr/musky uten kremet/søtt patchouli-preg. Drydown medium struktur, tørr/musky holder seg, men svak emosjonell respons. Ikke kjøpskandidat."
+  },
+  {
+    "id": 101,
+    "score": 5.25,
+    "name": "Dior Homme Cologne (2022)",
+    "status": "tested",
+    "owned": false,
+    "role": "wardrobe",
+    "profile": "Kjølig/fersk; moskus-base med kremet/såpete kant",
+    "notes": "Friskeste åpningen i parallelltest mot Sport, men lineær og 'litt kjedelig'; drydown moskus med lett kremethet og såpete kant – bekreftet dusjgel-svikt. No-buy."
   },
   {
     "id": 72,
@@ -707,6 +1025,7 @@
     "name": "Initio Parfums Privés",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "risiko. Strukturert tre + frukt. kan bli for klissete",
     "notes": ""
   },
@@ -716,6 +1035,7 @@
     "name": "Gisada Luxury Collection Oud Parfum",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "stor usikkerhet. ren tre + røkelse kan være relevant",
     "notes": ""
   },
@@ -725,6 +1045,7 @@
     "name": "Amouage Opus XIV Royal Tobacco",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "strukturert ryggrad; woody/amber; høy risiko orientalsk",
     "notes": "forventet høy, men Sødmen føles klissete og resinøs. Amber dominerer over tobakk. Opplevelsen blir irriterende over tid."
   },
@@ -734,6 +1055,7 @@
     "name": "Amouage Boundless",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "stabil uten utvikling",
     "notes": "Holdt seg relativt stabil uten tydelig utvikling; verken for søt eller kremet, men manglet bærende struktur og ble mindre interessant over tid (fallende score)"
   },
@@ -743,6 +1065,7 @@
     "name": "Givenchy Gentleman Society",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "moderne woody-amber; iris-risiko",
     "notes": "Startet relativt tørr og strukturert, men utviklet seg mot pudret/glatt iris og mistet attraktivitet; opplevdes som for kosmetisk i drydown og falt tydelig i score."
   },
@@ -752,6 +1075,7 @@
     "name": "Terre d'Hermès EDP Intense",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "pepper + tre + lava stone/mineral",
     "notes": "mye lavere enn antatt. Varmen går mot krydder/søtlig tre, ikke tørr/mineral varme."
   },
@@ -761,6 +1085,7 @@
     "name": "Parfums de Marly Carlisle",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "varm, elegant Aventus-variant",
     "notes": "ok, men for mørk krydder, patchouli, tung og nesten orientalsk ryggrad"
   },
@@ -770,6 +1095,7 @@
     "name": "Dior Sauvage EDT",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "pepper; bright ambroxan",
     "notes": "kunstig ambroxan i åpning, ikke bra. Tones ned, men overtas av en litt kremete/pudrete følelse. ikke superfan, men forsåvidt elegant nok."
   },
@@ -779,6 +1105,7 @@
     "name": "Bleu de Chanel Parfum (L'Exclusif)",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "deep smooth woods",
     "notes": ""
   },
@@ -788,6 +1115,7 @@
     "name": "Prada Luna Rossa Carbon",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "synthetic amberwood",
     "notes": "Flat synthetic amberwood; pleasant but generic; weakest among tested."
   },
@@ -797,6 +1125,7 @@
     "name": "Armani Code Parfum",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "iris; creamy amber",
     "notes": "Blir pudrete og kremete. Meh. Mitt på treet."
   },
@@ -806,6 +1135,7 @@
     "name": "Moncler Pour Homme EDP",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "Kjølig/jordete; våt sopp-karakter",
     "notes": "Våt sopp/såpete-jordete gjennom alle faser. No-buy."
   },
@@ -815,26 +1145,29 @@
     "name": "Bad Boy Cobalt Elixir (Carolina Herrera)",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "Varm/krydret åpning; myk søt frukt-kollaps i base",
     "notes": "Pepper og svakt jordete i åpning, ingen sødme først; utvikler søt, myk fruktighet i midtfase som avrunder basen – myk kollaps bekreftet. No-buy."
   },
   {
-    "id": 101,
-    "score": 5.25,
-    "name": "Dior Homme Cologne (2022)",
-    "status": "tested",
+    "id": 109,
+    "score": 5,
+    "name": "Byredo Mojave Ghost Absolu",
+    "status": "estimated",
     "owned": false,
-    "profile": "Kjølig/fersk; moskus-base med kremet/såpete kant",
-    "notes": "Friskeste åpningen i parallelltest mot Sport, men lineær og 'litt kjedelig'; drydown moskus med lett kremethet og såpete kant – bekreftet dusjgel-svikt. No-buy."
+    "role": "frontier",
+    "profile": "Woody Floral Musk; ambrette, sapodilla, magnolia; fiol, sandeltre; sedertre, amber, musk",
+    "notes": "Estimat 4,5–6. Tettere og mer treaktig enn original Mojave Ghost, men fortsatt kremet floral-musk-karakter. Røde flagg: kremet tekstur og myk avrunding i drydown (myk kollaps-risiko). Eneste oppside: mulig datapunkt for kremethet-signalet i §7. Beholdt i tracker på tross av score. KICKS."
   },
   {
-    "id": 105,
-    "score": 5.5,
-    "name": "Gucci Guilty Pour Homme Parfum",
-    "status": "tested",
+    "id": 110,
+    "score": 5,
+    "name": "Byredo Bal d'Afrique Absolu",
+    "status": "estimated",
     "owned": false,
-    "profile": "Woody Aromatic; einer/lavendel-åpning, patchouli/tørr tre-base",
-    "notes": "Testet mot Bleu de Chanel Parfum side om side, 3,5t bæretid. Åpning einer-dominert og ubestemmelig grønt, minimal sitrus – ikke på profil. Midtfase roer seg til 'behagelig', tørr/musky uten kremet/søtt patchouli-preg. Drydown medium struktur, tørr/musky holder seg, men svak emosjonell respons. Ikke kjøpskandidat."
+    "role": "frontier",
+    "profile": "Woody Floral; bergamot, neroli, sitron; fiol, ringblomst, sjasmin; sedertre, vetiver, musk, amber",
+    "notes": "Estimat 4,5–5,5. Rikere versjon av Bal d'Afrique. Røde flagg stabler seg: floral hjerte, vetiver i base, musk-mykhet. Beholdt i tracker på tross av score. KICKS."
   },
   {
     "id": 83,
@@ -842,6 +1175,7 @@
     "name": "Guerlain Vetiver EDT (2)",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "citrus; tobacco; vetiver",
     "notes": ""
   },
@@ -851,6 +1185,7 @@
     "name": "Hermès H24",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "metallic; green",
     "notes": "Green metallic tone you disliked; never clicked; outside your profile."
   },
@@ -860,6 +1195,7 @@
     "name": "Chanel Égoïste Platinum",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "barbershop fougère",
     "notes": "Barbershop fougère, floral-soapy, classic; started okay then fell off; ultimately disliked."
   },
@@ -869,6 +1205,7 @@
     "name": "Prada Luna Rossa Ocean EDP",
     "status": "tested",
     "owned": false,
+    "role": "wardrobe",
     "profile": "Kjølig/syntetisk amberwood; skarp",
     "notes": "Syntetisk/skarp amberwood-kollaps, trigget hodepine. No-buy."
   },
@@ -878,6 +1215,7 @@
     "name": "Creed Viking",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "aromatic pepper; mint; dry woods",
     "notes": ""
   },
@@ -887,6 +1225,7 @@
     "name": "Encre Noire",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "dark vetiver; earthy",
     "notes": ""
   },
@@ -896,6 +1235,7 @@
     "name": "Prada L'Homme / Milano",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "powdery; iris",
     "notes": ""
   },
@@ -905,6 +1245,7 @@
     "name": "Tom Ford Tobacco Vanille",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "vanilla; sweet; dense",
     "notes": ""
   },
@@ -914,25 +1255,8 @@
     "name": "Amouage Reflection Man",
     "status": "estimated",
     "owned": false,
+    "role": "wardrobe",
     "profile": "floral; powdery",
     "notes": ""
-  },
-  {
-    "id": 95,
-    "score": 7.5,
-    "name": "Loewe 7 Cobalt EDP",
-    "status": "tested",
-    "owned": false,
-    "profile": "Kjølig/mineralsk; urteaktig og tørr; mørkere og mindre polert enn Bleu de Chanel",
-    "notes": "Balansert åpning, holder seg gjennom midtfase; elegant fremfor vulgær, mindre ambroxan-drevet enn typiske konkurrenter. Lyst til å lukte igjen bekreftet i alle faser. Kjøpskandidat."
-  },
-  {
-    "id": 104,
-    "score": 8.5,
-    "name": "Bleu de Chanel Parfum",
-    "status": "tested",
-    "owned": false,
-    "profile": "Woody Aromatic; kjølig/tørr sitrus-åpning, fougère-hjerte (lavendel/geranium) uten overlevelse til drydown, sandeltre/cedar/amberwood/tonka-base",
-    "notes": "Testet mot Gucci Guilty Parfum side om side, 3,5t bæretid. Åpning elegant og tørr med dempet ambroxan og lett sitrus. Midtfase relativt lineær, sitrus dempes. Drydown: tre holder, mykner til 'ren' (ikke kremet) med svak varme/krydder (nutmeg/labdanum). Tydelig oppgradering fra EDP (7/10, ingen emosjonell trekkraft) – klar kjøpskandidat. Bekrefter DNA-presisering: fougère i hjerte (lavendel/geranium) manifesterer seg ikke på hud og er ikke diskvalifiserende når det ikke overlever til drydown. Tredje bekreftende datapunkt for dette prinsippet."
   }
 ]
