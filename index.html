@@ -41,8 +41,10 @@ body { font-family: Georgia, serif; background: var(--bg); color: var(--text); m
 .role-frontier { color: var(--gold); border-color: var(--gold); }
 .role-reference { color: var(--green); border-color: var(--green); }
 .role-wardrobe { color: var(--dim); border-color: var(--dim); }
+.role-frontier-fail { color: var(--red); border-color: var(--red); }
 .filter.frontier.active { border-color: var(--gold); color: var(--gold); }
 .filter.reference.active { border-color: var(--green); color: var(--green); }
+.filter.frontier-fail.active { border-color: var(--red); color: var(--red); }
 .detail { padding: 8px 14px 14px 55px; background: var(--panel); border-bottom: 1px solid var(--line-soft); }
 .detail .notes { font-size: 13px; color: var(--text); line-height: 1.7; border-left: 2px solid var(--line); padding-left: 10px; margin-bottom: 10px; }
 .detail .empty { font-size: 11px; color: var(--dim); font-family: ui-monospace, monospace; margin-bottom: 10px; letter-spacing: 0.08em; }
@@ -205,7 +207,7 @@ function delItem(id){
 // ============ FILTER ============
 function visible(){
   return data
-    .filter(f => filter==="tested"?f.status==="tested":filter==="estimated"?f.status!=="tested":filter==="owned"?f.owned:filter==="t1"?f.score>=9:filter==="t2"?(f.score>=7.5&&f.score<9):(filter==="frontier"||filter==="reference"||filter==="wardrobe")?(f.role||"wardrobe")===filter:true)
+    .filter(f => filter==="tested"?f.status==="tested":filter==="estimated"?f.status!=="tested":filter==="owned"?f.owned:filter==="t1"?f.score>=9:filter==="t2"?(f.score>=7.5&&f.score<9):(filter==="frontier"||filter==="reference"||filter==="wardrobe"||filter==="frontier-fail")?(f.role||"wardrobe")===filter:true)
     .filter(f => !search || f.name.toLowerCase().includes(search.toLowerCase()) || (f.profile||"").toLowerCase().includes(search.toLowerCase()) || (f.role||"").includes(search.toLowerCase()))
     .sort((a,b) => b.score - a.score);
 }
@@ -218,7 +220,7 @@ function render(){
   const t1 = data.filter(f=>f.score>=9).length;
   const fr = data.filter(f=>f.role==='frontier').length;
 
-  const filters = [["all","Alle"],["frontier","⟡ Frontier"],["reference","Referanse"],["wardrobe","Garderobe"],["tested","Testet"],["estimated","Estimert"],["owned","★ Eier"],["t1","9+"],["t2","7.5–8.5"]];
+  const filters = [["all","Alle"],["frontier","⟡ Frontier"],["frontier-fail","⟡ Fail"],["reference","Referanse"],["wardrobe","Garderobe"],["tested","Testet"],["estimated","Estimert"],["owned","★ Eier"],["t1","9+"],["t2","7.5–8.5"]];
 
   let html = `
   <div class="header">
@@ -285,7 +287,7 @@ function rowHtml(f){
   h += `<div class="row ${isOpen||isEdit?'open':''}" onclick="${isEdit?'':'toggle('+f.id+')'}">
     <div class="score" style="color:${sc(f.score)}">${f.score}</div>
     <div style="flex:1;min-width:0">
-      <div class="name">${esc(f.name)}${f.owned?' <span style="color:var(--gold);font-size:10px">★</span>':''}${f.role&&f.role!=='wardrobe'?`<span class="role role-${f.role}">${f.role==='frontier'?'⟡ FRONTIER':'REF'}</span>`:''}</div>
+      <div class="name">${esc(f.name)}${f.owned?' <span style="color:var(--gold);font-size:10px">★</span>':''}${f.role&&f.role!=='wardrobe'?`<span class="role role-${f.role}">${f.role==='frontier'?'⟡ FRONTIER':f.role==='frontier-fail'?'⟡ FAIL':'REF'}</span>`:''}</div>
       ${f.profile?`<div class="prof">${esc(f.profile)}</div>`:''}
     </div>
     <div class="dot ${f.status==='tested'?'tested':'estimated'}" title="${f.status==='tested'?'Testet på hud':'Estimert (ikke testet)'}"></div>
@@ -319,6 +321,7 @@ function formHtml(inline){
     <label>ROLLE</label>
     <select onchange="setF('role',this.value)">
       <option value="frontier" ${form.role==='frontier'?'selected':''}>Frontier – utfall usikkert, vil oppdatere DNA</option>
+      <option value="frontier-fail" ${form.role==='frontier-fail'?'selected':''}>Frontier fail – testet, utvidet ikke DNA</option>
       <option value="reference" ${form.role==='reference'?'selected':''}>Referanse – hudtestet, forankrer en akse</option>
       <option value="wardrobe" ${form.role==='wardrobe'?'selected':''}>Garderobe – kjent territorium</option>
     </select>
