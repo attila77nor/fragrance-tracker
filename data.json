@@ -663,11 +663,11 @@
     "id": 129,
     "score": 7,
     "name": "Essential Parfums Bois Impérial",
-    "status": "estimated",
+    "status": "tested",
     "owned": false,
     "role": "frontier",
     "profile": "Woody / Spicy; basilikum, rosa pepper, svart pepper; akigalawood, patchouli, ambrocenide; sedertre, vetiver, ambroxan",
-    "notes": "Estimat 6,5–7,5. Skarpt, tørt, moderne wood – nedre grense-test: hvor tørr/syntetisk kan Tørr wood bli før pull forsvinner. Flagg: ambroxan/vetiver i base, kan lese metallisk. Rimelig for nisje. F&L."
+    "notes": "Testet okt. 2026: 7/10, ikke kjøp. Åpning 6: svak selv inntil huden, svake urter, ingen pepper, tørr 'sjøluft'-note uten appell. Mid: tørr, luftig, elegant – 'brune/tørkede urter', hint av moderne fougère/mose, intim sillage; behagelig, lite nysgjerrig. Drydown 7: nøytral temperatur, riktig men uten pull. Vetiver slo ikke ut grønt/jordaktig."
   },
   {
     "id": 132,
@@ -731,13 +731,13 @@
   },
   {
     "id": 112,
-    "score": 6.5,
+    "score": 4.5,
     "name": "Goldfield & Banks Pacific Rock Moss",
-    "status": "estimated",
+    "status": "tested",
     "owned": false,
     "role": "frontier",
     "profile": "Fresh / Water-Aromatic; sitron, salvie, geranium; sedertre, mose, mineralsk/sjø-akkord",
-    "notes": "Estimat 6–7,5. Mest relevant på kjølig/mineralsk akse: sitrus + mineral + mose i tørr, lys struktur. Rødt flagg: salvie/geranium i hjertet – etter v3.7-prinsippet ikke diskvalifiserende hvis det ikke overlever til drydown. Risiko: for lett/tynn base, 'behagelig' uten pull. Verdt å teste som Water+Aromatic-referanse. F&L."
+    "notes": "Testet okt. 2026: under 5/10, ikke kjøp. Åpning 5: oljeaktig, tykk sitron med sitronmelisse-urt, nøytral. Mid: fet, søtere sitrus, 'bestemors såpe', svakt rent tre. Drydown: rar og ekkel – såpeaktig, lett søtlig musk. Utvikling mot søt såpe-musk = klassisk DNA-fail."
   },
   {
     "id": 124,
