@@ -161,13 +161,13 @@
   },
   {
     "id": 17,
-    "score": 8,
+    "score": 8.5,
     "name": "Dior Homme 2020",
-    "status": "estimated",
-    "owned": false,
-    "role": "wardrobe",
-    "profile": "dry cedar; clean vetiver; modern elegant",
-    "notes": ""
+    "status": "tested",
+    "owned": true,
+    "role": "reference",
+    "profile": "Tørr wood; luftig, transparent sedertre; bergamott, rosa pepper, elemi; Atlas-sedertre, patchouli (heart-fraksjon), cashmeran; Iso E Super, haitisk vetiver, hvit musk",
+    "notes": "Hudtest 09.11.2026 → 8,5/10. Kjøpt nov. 2026. Fjernvurdering 6,5–7,5 (polert-taket) var for lav; trackerens 8 var nærmere. Åpning ikke faseinndelt ('a beautiful scent'). Mid 8 (prediksjon 7–8): luftig og transparent, ikke tett, svært treaktig – 'uncompromised woody' – nesten ingen mykhet; ville vært enda bedre med et snev av søthet; lyst til å lukte igjen. Drydown 8,5: glattere og mykere ('the edges of the wood are more gone'), men treet holder formen helt; svak søthet nærmere varm, ren hud enn vanilje/tonka – 'absolutely beautiful'. Offisielle noter har ingen vanilje, tonka eller amber; søtheten kommer trolig fra cashmeran, hvit musk og Iso E Super (slutning). Signaler: myk avrunding med formen i behold er ikke kollaps (2. datapunkt etter Aventus sen drydown); varm ren-hud-søthet (musk/cashmeran på trerygg) er positiv og skilt fra vanilje/tonka – samme territorium som Dynasty-drydownen (sedertre/cashmeran). Kontrast: musk uten trerygg ble såpe i DH Sport/Cologne. Neste prøve: sedertre + cashmeran/musk, ikke vanilje/tonka (Santal Dān Shā, Loewe 001 Man)."
   },
   {
     "id": 18,
@@ -1298,5 +1298,35 @@
     "role": "wardrobe",
     "profile": "Woody Amber / Fougère; sypress, bergamott, kardemomme, solbær; lavendel, geranium, konjakk; sandeltre, cashmeran, oud, granbalsam",
     "notes": "Estimat 6–8, trolig rundt 7 (vurdert 2.11.2026, ikke hudtestet). Søt solbær-åpning med kardemomme som positiv markør; base med sandeltre, cashmeran og tam oud kan gi Dynasty-mønsteret, der drydownen redder en åpning utenfor profil. Flagg: søthet – anmeldere melder syltetøyaktig solbær og søthet gjennom hele forløpet, dempet i drydown; drydown-beskrivelser spriker fra luftig til kremet tre og noe pudder; Ralph Lauren oppgir bourbonvanilje som nøkkelnote, men den mangler i lanseringspyramiden; én anmelder får lavendel og geranium helt inn i drydown (fougère-regelen); granbalsam kan gi 'kvae' som Sauvage Elixir. Tørt og tydelig tre i drydown gir 8; kremet søthet gir Carbon EDP-utfall rundt 6. Hudtest, ikke blindkjøp. Tilgjengelighet hos F&L/KICKS/Gimle ikke bekreftet."
+  },
+  {
+    "id": 139,
+    "score": 7,
+    "name": "Armani Privé Santal Dān Shā",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Woody / Spicy; kardemomme, fiolblad, bergamott; elemi, røkelse, musk; virginiasedertre, ny-kaledonsk sandeltre, Dreamwood",
+    "notes": "Estimat 6,5–8. Kandidat etter DH2020-test (nov. 2026): tørr, varm treaktig med musk, myk og kremet start; deler elemi og sedertre med DH2020. Beskrevet som mykere og varmere fetter av Santal 33; god ytelse for EDT. Tester signalet varm ren-hud-søthet på trerygg. Flagg: røkelse, skarp fiolblad-start, én anmelder merker svak såpe. F&L fra ca. 2 035 kr."
+  },
+  {
+    "id": 140,
+    "score": 6.5,
+    "name": "Loewe 001 Man EDP",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Woody Musky; kardemomme, bergamott, mandarin; ambrette, sandeltre, sedertre, gulrotfrø; fiol, hvit musk, patchouliblad",
+    "notes": "Estimat 6–7,5 (opp fra 5,5–7 i F&L-gjennomgangen). Bygget rundt hudnær musk på tre – samme 'varm, ren hud' som DH2020-drydownen. Kardemomme i toppen (positiv markør). Flagg: fiol/ambrette kan bli pudret, lav projeksjon. F&L fra 1 370 kr."
+  },
+  {
+    "id": 141,
+    "score": 6.5,
+    "name": "Tom Ford Bois Pacifique",
+    "status": "estimated",
+    "owned": false,
+    "role": "frontier",
+    "profile": "Woody Spicy; akigalawood, kardemomme, gurkemeie; sedertre, røkelse, iris, eik, hvit sandeltre; amber, vanilje",
+    "notes": "Estimat 6–7,5 (ned fra 7–8,5 i F&L-gjennomgangen). Tørt tre med kardemomme og en kremet vaniljeantydning i basen, men søtheten er vanilje/amber – ikke ren-hud-typen DH2020 viste. Reserve, ikke førstevalg. Flagg: iris (pudder) og røkelse i hjertet; projeksjon omstridt (intim ifølge én database, lagt merke til på tvers av kontoret ifølge én anmelder). F&L 50 ml fra 1 675 kr."
   }
 ]
