@@ -1321,12 +1321,22 @@
   },
   {
     "id": 141,
-    "score": 6.5,
+    "score": 7,
     "name": "Tom Ford Bois Pacifique",
-    "status": "estimated",
+    "status": "tested",
     "owned": false,
-    "role": "frontier",
+    "role": "wardrobe",
     "profile": "Woody Spicy; akigalawood, kardemomme, gurkemeie; sedertre, røkelse, iris, eik, hvit sandeltre; amber, vanilje",
-    "notes": "Estimat 6–7,5 (ned fra 7–8,5 i F&L-gjennomgangen). Tørt tre med kardemomme og en kremet vaniljeantydning i basen, men søtheten er vanilje/amber – ikke ren-hud-typen DH2020 viste. Reserve, ikke førstevalg. Flagg: iris (pudder) og røkelse i hjertet; projeksjon omstridt (intim ifølge én database, lagt merke til på tvers av kontoret ifølge én anmelder). F&L 50 ml fra 1 675 kr."
+    "notes": "Hudtest 10.11.2026 side om side mot Goldfield & Banks Wood Infusion → 7/10 (estimat 6–7,5). Åpning 7,5 (prediksjon 7–8): først beskrevet som en tykkere, tettere DH2020; ved oppfølging ikke samme tre – mye mer blandet, treet mindre fremtredende, 'stands on its own', definitivt god; 'warm and sensuous spices with some slight sweetness' – søtheten allerede tyngre enn den lette søtheten DH2020 manglet. Mid 7 (prediksjon 7–7,5): treet kommer litt frem; svakt i bakgrunnen noe tykt, som innsiden av levende tre – klissen furukvae, normalt negativt, men nøytralt her fordi det ikke er fremme; myk søthet (trolig amber) tykner litt – nøytralt, kanskje litt ned. Lyst til å lukte igjen, men betinget av at tykkelsen ikke øker. Drydown 7 (~4 t, prediksjon 6,5–7): tykkelsen flatet ut; ingen vanilje og lite amber; myk kvae (samme furukvae) og trolig fortsatt tre. Lyst til å lukte igjen: ja. Prediksjonen bommet på basen (ventet amber/vanilje-overtakelse), og røkelse-flagget slo ikke ut. Anbefaling: ikke kjøp nå – dyrere enn The One Parfum og La Nuit EDT (begge 8,5, samme varm-krydrede rom); en ny bæring på 7,5+ kan endre det. Signal: furukvae negativt når den er fremme (Sauvage Elixir), nøytralt i bakgrunnen. F&L 50 ml fra 1 675 kr."
+  },
+  {
+    "id": 142,
+    "score": 6.5,
+    "name": "Goldfield & Banks Wood Infusion",
+    "status": "tested",
+    "owned": false,
+    "role": "wardrobe",
+    "profile": "Woody Amber; søt appelsin, lavendel; iris, amber; australske treslag, sandeltre, agarwood (oud), musk, patchouli",
+    "notes": "Hudtest 10.11.2026 side om side mot Tom Ford Bois Pacifique → 6,5/10, ikke kjøp. Åpning 6,5 (prediksjon 6–7): treaktig kjerne med tydelig, søtlig appelsin på toppen; tørr, ganske strukturert; samme type tre som DH2020, men appelsinen gjør den verre; behagelig, men ikke nysgjerrig. Mid 7 (prediksjon 6,5–7): 'definitely better now' – musky, myk, treaktig, svakt pudret (lite pudder, del av mykheten, ikke et problem); Y EDP-drydownfølelse – 'just Y EDP I don't need twice'. Drydown 6,5 (~4 t, prediksjon 6,5–7): ingen såpe; ikke mørkere, heller tvert imot; svak, lite Y EDP igjen – bare svakere, ikke mer interessant; myke treslag, musk, noe mykt og lett søtt av DH2020-typen (varm hud). Ingen lyst til å lukte igjen. Dårlig ytelse – nesten helt borte etter ca. 6 t, trekker også ned. Signaler: 'behagelig alene'-varselet holdt igjen; søt appelsin på toppen trekker ned (jf. Pacific Rock Moss); DH2020-søtheten dukket opp her, ikke i Bois Pacifique, men for svakt til å gi pull."
   }
 ]
