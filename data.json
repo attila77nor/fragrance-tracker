@@ -130,16 +130,6 @@
     "notes": ""
   },
   {
-    "id": 14,
-    "score": 8,
-    "name": "Bleu de chanel Parfum",
-    "status": "estimated",
-    "owned": false,
-    "role": "wardrobe",
-    "profile": "Tørrere og mer rett i strukturen. Mindre fluffy musk enn EDP",
-    "notes": ""
-  },
-  {
     "id": 15,
     "score": 8,
     "name": "Acqua di Parma – Colonia Oud",
@@ -311,13 +301,13 @@
   },
   {
     "id": 26,
-    "score": 7,
+    "score": 6,
     "name": "Mancera Cedrat Boisé",
-    "status": "estimated",
+    "status": "tested",
     "owned": false,
     "role": "wardrobe",
     "profile": "Strukturert sitrus i topp. Tørrere og mørkere base enn original",
-    "notes": "Testet. Helt ok. men sprayet lite, den var nesten tom. Kunne godt testet en gang til"
+    "notes": "Testet. Helt ok. men sprayet lite, den var nesten tom. Kunne godt testet en gang til. Satt til testet 6/10 i tråd med DUFT-DNA v3.9: myk kollaps; ingen sitrus kjent."
   },
   {
     "id": 27,
@@ -361,13 +351,13 @@
   },
   {
     "id": 31,
-    "score": 7,
+    "score": 8,
     "name": "Montblanc Explorer",
     "status": "tested",
     "owned": false,
     "role": "wardrobe",
     "profile": "vetiver; ambroxan; leather",
-    "notes": "Kopi av Aventus Creed. Veldig god, men oppleves litt billig / enkel"
+    "notes": "Kopi av Aventus Creed. Veldig god, men oppleves litt billig / enkel. Revidert opp fra 7 til 8 (DUFT-DNA v3.9): har vokst og brukes ofte; åpningen er svakeste fase."
   },
   {
     "id": 32,
@@ -417,16 +407,6 @@
     "owned": false,
     "role": "wardrobe",
     "profile": "mer woody/amber og mindre gourmandy enn enkelte andre Amouage-dufter",
-    "notes": ""
-  },
-  {
-    "id": 38,
-    "score": 7,
-    "name": "Guerlain Vetiver EDT",
-    "status": "estimated",
-    "owned": false,
-    "role": "wardrobe",
-    "profile": "tørr, jordlig vetiver + cedar uten grønn aromatikk",
     "notes": ""
   },
   {
@@ -1172,12 +1152,12 @@
   {
     "id": 83,
     "score": 4,
-    "name": "Guerlain Vetiver EDT (2)",
+    "name": "Guerlain Vetiver EDT",
     "status": "estimated",
     "owned": false,
     "role": "wardrobe",
     "profile": "citrus; tobacco; vetiver",
-    "notes": ""
+    "notes": "Dobbeltføring med estimat 7 fjernet 17.11.2026; grønn eller jordet vetiver regnes nå nær hard fail (DUFT-DNA v3.9)."
   },
   {
     "id": 84,
@@ -1358,5 +1338,35 @@
     "role": "wardrobe",
     "profile": "Amber / gourmand; røykaktig kakao, appelsin; perubalsam, mørk sjokolade; tobakk",
     "notes": "Hudtest 11.11.2026 (venstre arm) side om side mot Fugazzi Vanilla Haze Extrait → 5,5/10, ikke kjøp. Åpning 5,5 (prediksjon 5–6,5): frisk tobakk, veldig tydelig; kakao svært svak; kanskje appelsinskall som svak bitterhet; vanilje bare med nesen helt inntil; 'not bad as a fragrance, but not something I would wear' – både tobakken i seg selv og 'someone else's style'. Ingen lyst til å lukte igjen. Mid 6 (prediksjon 4,5–5,5): først mer kakao, tobakken fortsatt fremtredende, litt søtere men ganske lineær, appelsinen borte; senere kakaoen borte og vanilje kommer gjennom, scoren holdt seg på 6; 'not bad, slightly better now, but not for me'. Ingen lyst til å lukte igjen. Drydown 5,5 (~4 t, ingen prediksjon gitt): mykere, noe såpeaktig kommer gjennom; mer spiselig enn Vanilla Haze; 'not a fan'. Alt trekker ned, mest det spiselige. Ingen lyst til å lukte igjen. Prediksjonen bommet på ledetonen (ventet sjokolade-appelsin, fikk frisk tobakk) og på mid (6 mot 4,5–5,5). Signaler: tobakk som hovedtone = 'not for me' gjennom alle faser (første hudtest-datapunkt; Tobacco Vanille 1 er kun estimat); vanilje i tobakksduft tålt i mid, men det spiselige var hovedproblemet i drydown – i tråd med søt/gourmand-regelen; kakaoen var flyktig; såpetypen ikke avklart."
+  },
+  {
+    "id": 145,
+    "score": 7.5,
+    "name": "YSL L'Homme EDP",
+    "status": "tested",
+    "owned": false,
+    "role": "wardrobe",
+    "profile": "Kjølig/mineralsk akse; luftig og strukturert; vetiver oppgitt i hjertet",
+    "notes": "Hudtest nov. 2026 → 7,5/10. Kjølig, luftig og strukturert uten kollaps, men tynn og nøytral; lite lyst til å lukte igjen. Vetiver: litt jordpreg i mid, lite grønt og ingen grønn rest i drydown. Bekrefter at den kjølige aksen krever dybde, ikke bare kjølighet. Ført inn 17.11.2026 fra DUFT-DNA v3.9; dato og fasevise notater er ikke loggført."
+  },
+  {
+    "id": 146,
+    "score": 6,
+    "name": "Amouage Enclave",
+    "status": "tested",
+    "owned": false,
+    "role": "wardrobe",
+    "profile": "Varm/krydret akse; røkelse med brent krydder og shisha-preg, rik Midtøsten-stil",
+    "notes": "Hudtest nov. 2026 → 6/10. Åpningen var bedre enn ventet, men røkelsen (brent krydder, shisha) er «ikke meg», og den rike, krydrede Midtøsten-stilen passer ikke. Ført inn 17.11.2026 fra DUFT-DNA v3.9; dato og fasevise notater er ikke loggført."
+  },
+  {
+    "id": 147,
+    "score": 6,
+    "name": "D&G Light Blue EDP",
+    "status": "tested",
+    "owned": false,
+    "role": "wardrobe",
+    "profile": "",
+    "notes": "Hudtestet → 6/10: myk kollaps. Ført inn 17.11.2026 fra DUFT-DNA v3.9; dato og fasevise notater er ikke loggført."
   }
 ]
